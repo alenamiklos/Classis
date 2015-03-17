@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */; };
 		3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */; };
 		3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */; };
 		3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986DE1AB22CEF0079EB56 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		3F6986D51AB22CEF0079EB56 /* Classis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6986D91AB22CEF0079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				3F6986FF1AB23A440079EB56 /* MainScreenVC.swift */,
 				3F6987011AB23AF40079EB56 /* EventCreationVC.swift */,
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
+				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */,
 				3F6987021AB23AF40079EB56 /* EventCreationVC.swift in Sources */,
+				339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */,
 				3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */,
 				3F6987041AB23BAF0079EB56 /* TimelineVC.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
@@ -367,6 +371,7 @@
 				INFOPLIST_FILE = Classis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -377,6 +382,7 @@
 				INFOPLIST_FILE = Classis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -433,6 +439,7 @@
 				3F6986F61AB22CEF0079EB56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F6986F71AB22CEF0079EB56 /* Build configuration list for PBXNativeTarget "ClassisTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +448,7 @@
 				3F6986F91AB22CEF0079EB56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
