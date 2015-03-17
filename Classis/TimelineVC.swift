@@ -13,26 +13,39 @@ import UIKit
 class TimelineVC: UITableViewController {
     
     @IBOutlet var timeLine: UITableView!
+    var listaEventos: [Evento]! = []
+    var dao: DAO = DAO()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.timeLine.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        print("DAO: ")
+        println(self.dao)
+        //self.listaEventos = []
+        self.listaEventos? = self.dao.listaEventos(nil, usuario: nil)
+        print("Eventos: ")
+        println(self.listaEventos?.count)
     }
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> TimeLineTableViewCell
     {
-        var cell = timeLine.dequeueReusableCellWithIdentifier("celulaTimeline") as! TimeLineTableViewCell
-        cell.NomeEvento?.text = "Testando a celula"
-        cell.DescricaoEvento?.text = "Evento para a zueira"
         
-            
+ /*       @IBOutlet weak var ImageEvento: UIImageView!
+        @IBOutlet weak var NomeEvento: UILabel!
+        @IBOutlet weak var DescricaoEvento: UILabel!
+        @IBOutlet weak var TipoEvento: UILabel!
+        @IBOutlet weak var DataEvento: UILabel!
+        @IBOutlet weak var HoraEvento: UILabel!
+        @IBOutlet weak var LocalEvento: UILabel!
+        @IBOutlet weak var PrecoEvento: UILabel! */
+        
+        var cell = timeLine.dequeueReusableCellWithIdentifier("celulaTimeline") as TimeLineTableViewCell
+        let eventoAtual = self.listaEventos![indexPath.row]
+        
+        cell.NomeEvento.text? = eventoAtual.titulo
+        cell.DescricaoEvento?.text = "Falta incluir a descrição do evento na classe 'Evento'"
+        cell.TipoEvento.text? = eventoAtual.tipoEvento
         return cell
     }
 
@@ -43,7 +56,16 @@ class TimelineVC: UITableViewController {
 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        var i = 0
+        if (self.listaEventos != nil) {
+            if (self.listaEventos?.count > 0) {
+                i = self.listaEventos!.count
+                
+                
+            }
+        }
+        println(i)
+        return i
     }
 
    

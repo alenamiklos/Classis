@@ -10,7 +10,7 @@ import UIKit
 
 class TimeLineTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ImageEvento: UIView!
+    @IBOutlet weak var ImageEvento: UIImageView!
     @IBOutlet weak var NomeEvento: UILabel!
     @IBOutlet weak var DescricaoEvento: UILabel!
     @IBOutlet weak var TipoEvento: UILabel!

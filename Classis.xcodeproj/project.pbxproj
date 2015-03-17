@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33143BF11AB8B9E80026952F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF01AB8B9E80026952F /* Usuario.swift */; };
+		33143BF31AB8BA130026952F /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF21AB8BA130026952F /* Evento.swift */; };
+		33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */; };
+		33143BF71AB8BA330026952F /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF61AB8BA330026952F /* DAO.swift */; };
 		339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */; };
 		3A2F17F31AB81FAA0091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33143BF01AB8B9E80026952F /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		33143BF21AB8BA130026952F /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoUsuario.swift; sourceTree = "<group>"; };
+		33143BF61AB8BA330026952F /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Lemon Yellow Sun.otf"; sourceTree = "<group>"; };
 		3A2F17F71AB823CF0091489C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -99,7 +107,6 @@
 				3F6986DE1AB22CEF0079EB56 /* Main.storyboard */,
 				3F6986E31AB22CEF0079EB56 /* LaunchScreen.xib */,
 				3F6986D81AB22CEF0079EB56 /* Supporting Files */,
-				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
 			);
 			path = Classis;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 				3F6987011AB23AF40079EB56 /* EventCreationVC.swift */,
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
+				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
 				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 			);
 			name = Control;
@@ -147,6 +155,10 @@
 		3F6986FC1AB238D90079EB56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33143BF01AB8B9E80026952F /* Usuario.swift */,
+				33143BF21AB8BA130026952F /* Evento.swift */,
+				33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */,
+				33143BF61AB8BA330026952F /* DAO.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,11 +266,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33143BF71AB8BA330026952F /* DAO.swift in Sources */,
 				3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */,
 				3F6987021AB23AF40079EB56 /* EventCreationVC.swift in Sources */,
 				339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */,
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
+				33143BF31AB8BA130026952F /* Evento.swift in Sources */,
 				3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */,
+				33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */,
+				33143BF11AB8B9E80026952F /* Usuario.swift in Sources */,
 				3F6987041AB23BAF0079EB56 /* TimelineVC.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
 				3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */,
