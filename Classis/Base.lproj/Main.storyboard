@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <scenes>
         <!--LoginVC-->
@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYV-OC-4l7">
@@ -66,21 +66,22 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="294" y="305"/>
         </scene>
-        <!--Item 2-->
+        <!--Timeline-->
         <scene sceneID="q5D-YW-EFv">
             <objects>
-                <viewController id="U12-ng-Mxq" customClass="TimelineVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Timeline" id="U12-ng-Mxq" customClass="TimelineVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PeU-zz-SuE"/>
                         <viewControllerLayoutGuide type="bottom" id="mO0-Rx-DlT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3n1-Dw-m8M">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-lX-zKH">
@@ -112,22 +113,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="v4c-9q-T4h"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="v4c-9q-T4h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY7-4X-aBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2179.5" y="551"/>
         </scene>
-        <!--Item 1-->
+        <!--Evento-->
         <scene sceneID="Hza-0D-Sh1">
             <objects>
-                <viewController id="0z3-Jg-Fnx" customClass="EventCreationVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Evento" id="0z3-Jg-Fnx" customClass="EventCreationVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3zd-Pd-aTd"/>
                         <viewControllerLayoutGuide type="bottom" id="rLc-sQ-eBt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mte-v2-vDD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbt-eI-7mp">
@@ -303,22 +304,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3gg-d5-fd0"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="3gg-d5-fd0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6s-F4-UbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2179.5" y="-303"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="dFS-ft-al3">
             <objects>
-                <viewController id="KWA-YQ-gtH" sceneMemberID="viewController">
+                <viewController title="Profile" id="KWA-YQ-gtH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nv8-zs-Oza"/>
                         <viewControllerLayoutGuide type="bottom" id="u2J-Pq-vKB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VMN-lC-Z44">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2U-kK-4vh">
@@ -393,16 +394,17 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="trl-Ep-FTs"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="trl-Ep-FTs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zig-N8-iGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1113" y="1185"/>
         </scene>
-        <!--Main ScreenVC-->
+        <!--Main-->
         <scene sceneID="QrP-hR-tHC">
             <objects>
-                <tabBarController id="eim-42-83h" customClass="MainScreenVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Main" id="eim-42-83h" customClass="MainScreenVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dJP-uj-bJV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

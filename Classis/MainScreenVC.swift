@@ -12,7 +12,10 @@ class MainScreenVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //self.tabBar.barTintColor = UIColor(rgba: laranja1)
+        self.tabBar.tintColor = UIColor(rgba: laranja1)
+    
         // Do any additional setup after loading the view.
     }
 
