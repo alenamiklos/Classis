@@ -8,17 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */; };
-
 		3A2F17F31AB81FAA0091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F61AB821480091489C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986D91AB22CEF0079EB56 /* Info.plist */; };
 		3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F71AB823CF0091489C /* UIColorExtension.swift */; };
 		3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F91AB8244D0091489C /* ClassisColor.swift */; };
-
+		3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575BF1AB8AB3D0067D357 /* Images.xcassets */; };
 		3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */; };
 		3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */; };
 		3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986DE1AB22CEF0079EB56 /* Main.storyboard */; };
-		3F6986E21AB22CEF0079EB56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986E11AB22CEF0079EB56 /* Images.xcassets */; };
 		3F6986E51AB22CEF0079EB56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986E31AB22CEF0079EB56 /* LaunchScreen.xib */; };
 		3F6986F11AB22CEF0079EB56 /* ClassisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986F01AB22CEF0079EB56 /* ClassisTests.swift */; };
 		3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986FF1AB23A440079EB56 /* MainScreenVC.swift */; };
@@ -37,19 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
 		339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
-
 		3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Lemon Yellow Sun.otf"; sourceTree = "<group>"; };
 		3A2F17F71AB823CF0091489C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3A2F17F91AB8244D0091489C /* ClassisColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassisColor.swift; sourceTree = "<group>"; };
-
+		3AA575BF1AB8AB3D0067D357 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F6986D51AB22CEF0079EB56 /* Classis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6986D91AB22CEF0079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3F6986DF1AB22CEF0079EB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F6986E11AB22CEF0079EB56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F6986E41AB22CEF0079EB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3F6986EA1AB22CEF0079EB56 /* ClassisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6986EF1AB22CEF0079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +97,6 @@
 				3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */,
 				3F6986FA1AB2389D0079EB56 /* Control */,
 				3F6986DE1AB22CEF0079EB56 /* Main.storyboard */,
-				3F6986E11AB22CEF0079EB56 /* Images.xcassets */,
 				3F6986E31AB22CEF0079EB56 /* LaunchScreen.xib */,
 				3F6986D81AB22CEF0079EB56 /* Supporting Files */,
 				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
@@ -145,6 +139,7 @@
 				3F6987011AB23AF40079EB56 /* EventCreationVC.swift */,
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
+				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -237,10 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2F17F61AB821480091489C /* Info.plist in Resources */,
+				3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */,
 				3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */,
 				3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */,
 				3F6986E51AB22CEF0079EB56 /* LaunchScreen.xib in Resources */,
-				3F6986E21AB22CEF0079EB56 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +256,8 @@
 			files = (
 				3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */,
 				3F6987021AB23AF40079EB56 /* EventCreationVC.swift in Sources */,
-
 				339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */,
-
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
-
 				3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */,
 				3F6987041AB23BAF0079EB56 /* TimelineVC.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
