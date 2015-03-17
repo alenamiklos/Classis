@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class TimelineVC: UITableViewController {
     
     @IBOutlet var timeLine: UITableView!
@@ -24,11 +26,12 @@ class TimelineVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> TimeLineTableViewCell
     {
-        var cell: UITableViewCell = timeLine.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell: TimeLineTableViewCell = timeLine.dequeueReusableCellWithIdentifier("cell") as! TimeLineTableViewCell
         cell.textLabel?.text = ("Evento")
-        
+        cell.NomeEvento?.text = ("Evento")
+            
         return cell
     }
 
