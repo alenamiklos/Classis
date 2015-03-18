@@ -18,13 +18,18 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var remuneracao: UISegmentedControl!
     @IBOutlet weak var precoEvento: UITextField!
     
-    
+    var tipoEventosArray:NSArray = []
+    var tipoEventoEscolhido:NSString
     override func viewDidLoad() {
         super.viewDidLoad()
         
     
         scroller.scrollEnabled = true
         scroller.contentSize = CGSizeMake(370, 1000)
+        
+        
+        
+        tipoEventosArray = ["Aulas","Worshop","Aula Particular","Palestra","Serviços"]
         // Do any additional setup after loading the view.
     }
     
@@ -66,7 +71,15 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return tipoEventosArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return "\(tipoEventosArray[row])"
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        <#code#>
     }
     
     override func didReceiveMemoryWarning() {
