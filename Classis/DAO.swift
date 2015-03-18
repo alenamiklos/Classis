@@ -13,7 +13,7 @@ class DAO {
     func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
     {
         var listaFake = [Evento]()
-        var jordan: Usuario = Usuario(nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        var jordan: Usuario = Usuario(id: 1,nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         
         println("Entrando na lista de eventos...")
         
@@ -94,7 +94,7 @@ class DAO {
 
     }
     
-  /*  func buscaUser(id: Int) -> Usuario
+    func buscaUser(id: Int) -> Usuario
     {
         var achou: Usuario!
         var naoAchou: Usuario!
@@ -122,7 +122,7 @@ class DAO {
         return naoAchou
         
         
-    } */
+    }
 
     
     func loginSuccessful() -> Bool {

@@ -28,5 +28,57 @@
 		<key>media</key>
 		<integer>10</integer>
 	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>Eat and Code</string>
+		<key>tipoEvento</key>
+		<string>Workshop</string>
+		<key>descEvento</key>
+		<string>Para comer e programar é só começar</string>
+		<key>dataHora</key>
+		<date>2015-03-17T23:17:36Z</date>
+		<key>tipoRemuneracao</key>
+		<string>Gratuito</string>
+		<key>preco</key>
+		<string></string>
+		<key>localEvento</key>
+		<string>Copa do BEPiD</string>
+		<key>imagem</key>
+		<string></string>
+		<key>responsavel</key>
+		<integer>1</integer>
+		<key>participantes</key>
+		<array/>
+		<key>areaConhecimento</key>
+		<string>Programação</string>
+		<key>media</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>Learning with Alena</string>
+		<key>tipoEvento</key>
+		<string>Workshop</string>
+		<key>descEvento</key>
+		<string>Photoshop só para os mitos</string>
+		<key>dataHora</key>
+		<date>2015-03-25T23:17:36Z</date>
+		<key>tipoRemuneracao</key>
+		<string>Pago</string>
+		<key>preco</key>
+		<string>R$ 1000,00</string>
+		<key>localEvento</key>
+		<string>BossRoom</string>
+		<key>imagem</key>
+		<string></string>
+		<key>responsavel</key>
+		<integer>1</integer>
+		<key>participantes</key>
+		<array/>
+		<key>areaConhecimento</key>
+		<string>Design</string>
+		<key>media</key>
+		<integer>10</integer>
+	</dict>
 </array>
 </plist>
