@@ -44,9 +44,11 @@ class TimelineVC: UITableViewController {
         let eventoAtual = self.listaEventos![indexPath.row]
         
         cell.NomeEvento.text? = eventoAtual.titulo
-        cell.DescricaoEvento?.text = "Falta incluir a descrição do evento na classe 'Evento'"
+        cell.DescricaoEvento?.text = eventoAtual.descEvento
+        //cell.ImageEvento.image = UIImage(named: eventoAtual.imagem!)
         cell.TipoEvento.text? = eventoAtual.tipoEvento
         cell.LocalEvento.text = eventoAtual.local
+        cell.PrecoEvento.text = eventoAtual.preco?
         
         return cell
     }
