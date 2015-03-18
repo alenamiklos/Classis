@@ -19,7 +19,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var precoEvento: UITextField!
     
     var tipoEventosArray:NSArray = []
-    var tipoEventoEscolhido:NSString
+    var tipoEventoEscolhido:NSString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +35,20 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
    // titulo: String, tipoEvento: String, dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
     @IBAction func confirmarEventoButton(sender: UIButton) {
-        
         //crisEventos(titulo: nomeEvento.text, tipoEvento: "Aula", dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
+        
+        var evento = Evento(titulo: nomeEvento.text,
+            tipoEvento: tipoEvento, //picker
+            descEvento: descEvento.text,
+            dataHora: dataHoraEvento,
+            tipoRemuneracao: tipoRemuneracao, //picker
+            preco: precoEvento.text,
+            local: localEvento.text,
+            imagem: nil,
+            responsavel:jordan,
+            areaConhecimento: areaConhecimento.text, //criar
+            media: nil)
+
         
     }
     
@@ -78,9 +90,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         return "\(tipoEventosArray[row])"
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
-    }
+//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        <#code#>
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

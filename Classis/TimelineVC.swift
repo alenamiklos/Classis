@@ -29,7 +29,7 @@ class TimelineVC: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        println("reloading data")
+        println("Reloading data")
         timeLine.reloadData()
         
     }
