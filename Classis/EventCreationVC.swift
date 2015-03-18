@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventCreationVC: UIViewController {
+class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var nomeEvento: UITextField!
@@ -16,6 +16,7 @@ class EventCreationVC: UIViewController {
     @IBOutlet weak var tipoEvento: UIPickerView!
     @IBOutlet weak var dataHoraEvento: UIDatePicker!
     @IBOutlet weak var remuneracao: UISegmentedControl!
+    @IBOutlet weak var precoEvento: UITextField!
     
     
     override func viewDidLoad() {
@@ -26,21 +27,53 @@ class EventCreationVC: UIViewController {
         scroller.contentSize = CGSizeMake(370, 1000)
         // Do any additional setup after loading the view.
     }
-
+    
+   // titulo: String, tipoEvento: String, dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
+    @IBAction func confirmarEventoButton(sender: UIButton) {
+        
+        //crisEventos(titulo: nomeEvento.text, tipoEvento: "Aula", dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
+        
+    }
+    
+    
+    
+    
+    
+    //Segmented Control
+    @IBAction func tipoRemuneracao(sender: AnyObject)
+    {
+        if  remuneracao.selectedSegmentIndex == 0
+        {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.precoEvento.alpha = 1
+            })
+            
+            self.precoEvento.enabled = true
+        }
+        if  remuneracao.selectedSegmentIndex == 1
+        {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.precoEvento.alpha = 0.2
+            })
+            
+            self.precoEvento.enabled = false
+        }
+    }
+    
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

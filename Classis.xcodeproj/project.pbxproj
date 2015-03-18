@@ -141,8 +141,8 @@
 		3F6986FA1AB2389D0079EB56 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */,
 				3F6986FF1AB23A440079EB56 /* MainScreenVC.swift */,
+				3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */,
 				3F6987011AB23AF40079EB56 /* EventCreationVC.swift */,
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
