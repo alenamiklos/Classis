@@ -10,9 +10,20 @@ import UIKit
 
 class EventCreationVC: UIViewController {
 
+    @IBOutlet weak var scroller: UIScrollView!
+    @IBOutlet weak var nomeEvento: UITextField!
+    @IBOutlet weak var localEvento: UITextField!
+    @IBOutlet weak var tipoEvento: UIPickerView!
+    @IBOutlet weak var dataHoraEvento: UIDatePicker!
+    @IBOutlet weak var remuneracao: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    
+        scroller.scrollEnabled = true
+        scroller.contentSize = CGSizeMake(370, 1000)
         // Do any additional setup after loading the view.
     }
 

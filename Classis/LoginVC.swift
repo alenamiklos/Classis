@@ -10,6 +10,13 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var cursoUsuario: UILabel!
+    @IBOutlet weak var imagemAvaliacao: UIImageView!
+    @IBOutlet weak var habilidadesTextView: UITextView!
+    @IBOutlet weak var nomeUsuario: UILabel!
+    @IBOutlet weak var eventosRealizadosUsuario: UIButton!
+    @IBOutlet weak var imagemUsuario: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -18,13 +18,7 @@ class TimeLineTableViewCell: UITableViewCell {
     @IBOutlet weak var HoraEvento: UILabel!
     @IBOutlet weak var LocalEvento: UILabel!
     @IBOutlet weak var PrecoEvento: UILabel!
-    @IBOutlet weak var ButtonEvent: UIButton!
     
-    @IBAction func EventoButton(sender: UIButton)
-    {
-        
-    }
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

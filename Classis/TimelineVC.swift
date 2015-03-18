@@ -46,6 +46,8 @@ class TimelineVC: UITableViewController {
         cell.NomeEvento.text? = eventoAtual.titulo
         cell.DescricaoEvento?.text = "Falta incluir a descrição do evento na classe 'Evento'"
         cell.TipoEvento.text? = eventoAtual.tipoEvento
+        cell.LocalEvento.text = eventoAtual.local
+        
         return cell
     }
 
