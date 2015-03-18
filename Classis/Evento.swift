@@ -22,7 +22,9 @@ class Evento {
     var areaConhecimento: String
     var media: Float?
     
-    init(titulo: String, tipoEvento: String, descEvento: String, dataHora: NSDate, tipoRemuneracao: String, preco: String?, local: String, imagem: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
+//    Evento(titulo: object["titulo"] as String, tipoEvento: object["tipoEvento"] as String, descEvento: object["descEvento"] as String, dataHora: object["dataHora"] as NSDate, tipoRemuneracao: object["tipoRemuneracao"] as String, preco: object["preco"] as? String, local: object["localEvento"] as String, imagem: object["imagem"] as? String, responsavel:jordan, participantes: nil, areaConhecimento: object["areaConhecimento"] as String, media: nil)
+    
+    init(titulo: String, tipoEvento: String, descEvento: String, dataHora: NSDate, tipoRemuneracao: String, preco: String?, local: String, imagem: String?, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
     {
         self.titulo = titulo
         self.tipoEvento = tipoEvento

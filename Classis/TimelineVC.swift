@@ -22,9 +22,16 @@ class TimelineVC: UITableViewController {
         print("DAO: ")
         println(self.dao)
         //self.listaEventos = []
+        
         self.listaEventos? = self.dao.listaEventos(nil, usuario: nil)
         print("Eventos: ")
         println(self.listaEventos?.count)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        println("reloading data")
+        timeLine.reloadData()
+        
     }
 
     

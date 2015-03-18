@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titulo</key>
+		<string>Aula de C (Fundamentos)</string>
+		<key>tipoEvento</key>
+		<string>Aulão</string>
+		<key>descEvento</key>
+		<string>Fundamentos da linguagem C</string>
+		<key>dataHora</key>
+		<date>2015-03-17T23:17:36Z</date>
+		<key>tipoRemuneracao</key>
+		<string>Gratuita</string>
+		<key>preco</key>
+		<string>R$ 30,00</string>
+		<key>localEvento</key>
+		<string>BEPiD</string>
+		<key>imagem</key>
+		<string>aulão.jpg</string>
+		<key>responsavel</key>
+		<integer>1</integer>
+		<key>participantes</key>
+		<array/>
+		<key>areaConhecimento</key>
+		<string>Programação</string>
+		<key>media</key>
+		<integer>10</integer>
+	</dict>
+</array>
+</plist>
