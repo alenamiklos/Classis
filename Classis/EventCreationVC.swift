@@ -18,9 +18,12 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var remuneracao: UISegmentedControl!
     @IBOutlet weak var precoEvento: UITextField!
     @IBOutlet weak var descricaoEvento: UITextField!
+    var dao: DAO = DAO()
+    
     
     var tipoEventosArray:NSArray = []
     var tipoEventoEscolhido:NSString = ""
+    var tipoRemuneracaoEscolhido:NSString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,23 +43,27 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBAction func confirmarEventoButton(sender: UIButton) {
         //crisEventos(titulo: nomeEvento.text, tipoEvento: "Aula", dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
         
+        var jordan: Usuario = Usuario(nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        var data: NSDate = NSDate()
+        
+        
         var evento = Evento(titulo: nomeEvento.text,
-            tipoEvento: tipoEvento, //picker
-            descEvento: descEvento.text,
-            dataHora: dataHoraEvento,
-            tipoRemuneracao: tipoRemuneracao, //picker
+            tipoEvento: tipoEventoEscolhido, //picker
+            descEvento: descricaoEvento.text,
+            dataHora: data,
+            tipoRemuneracao: tipoRemuneracaoEscolhido, //picker
             preco: precoEvento.text,
             local: localEvento.text,
             imagem: nil,
             responsavel:jordan,
-            areaConhecimento: areaConhecimento.text, //criar
+            participantes:nil,
+            areaConhecimento: "Programação", //criar
             media: nil)
+        
+        dao.criarEvento(evento)
 
         
     }
-    
-    
-    
     
     
     //Segmented Control
@@ -66,6 +73,8 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
                 self.precoEvento.alpha = 1
+                
+                self.tipoRemuneracaoEscolhido = "Pago"
             })
             
             self.precoEvento.enabled = true
@@ -74,8 +83,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
                 self.precoEvento.alpha = 0.2
+                
             })
-            
+            self.tipoRemuneracaoEscolhido = "Gratuito"
             self.precoEvento.enabled = false
         }
     }
@@ -118,6 +128,11 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 

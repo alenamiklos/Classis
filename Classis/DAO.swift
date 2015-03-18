@@ -15,7 +15,7 @@ class DAO {
         var listaFake = [Evento]()
         var jordan: Usuario = Usuario(nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         
-        println("Entrando na lita de eventos...")
+        println("Entrando na lista de eventos...")
         
         println(jordan)
 
@@ -56,7 +56,7 @@ class DAO {
                                 dataHora: object["dataHora"] as NSDate,
                                 tipoRemuneracao: object["tipoRemuneracao"] as String,
                                 preco: object["preco"] as? String,
-                                local: object["local"] as String,
+                                local: object["localEvento"] as String,
                                 imagem: object["imagem"] as? String,
                                 responsavel:jordan, participantes: nil,
                                 areaConhecimento: object["areaConhecimento"] as String,
@@ -93,6 +93,37 @@ class DAO {
    
 
     }
+    
+  /*  func buscaUser(id: Int) -> Usuario
+    {
+        var achou: Usuario!
+        var naoAchou: Usuario!
+        var temp: Usuario!
+        
+        var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = pathAux.stringByAppendingPathComponent("Users.plist")
+        var fileManager = NSFileManager.defaultManager()
+        
+        var data : NSMutableArray! = NSMutableArray(contentsOfFile: path)
+        
+        for var i = 0; i < data.count; i++
+        {
+            let object = data[i] as NSDictionary
+            
+            temp.id = object["id"] as Int
+            
+            if (temp.id == id)
+            {
+                achou = temp
+                return achou
+            }
+        }
+        
+        return naoAchou
+        
+        
+    } */
+
     
     func loginSuccessful() -> Bool {
         return true

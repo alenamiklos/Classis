@@ -11,6 +11,7 @@ import UIKit
 
 class Usuario
 {
+    //var id: Int
     var nome: String
     var curso: String
     var habilidades: [String] // lista de String
@@ -22,6 +23,7 @@ class Usuario
 
     
     init(nome: String, curso: String, habilidades: [String], foto: UIImage?, avaliacoes: [AvaliacaoUsuario]? ){
+            //self.id = id
             self.nome = nome
             self.curso = curso
             self.habilidades = habilidades

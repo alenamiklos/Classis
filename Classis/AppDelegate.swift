@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
+        var fileManager = NSFileManager.defaultManager()
+        
+        if (!(fileManager.fileExistsAtPath(path)))
+        {
+            var bundle : NSString! = NSBundle.mainBundle().pathForResource("Eventos", ofType: "plist")
+            fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
+        }
+
+        
+        
         return true
     }
 
