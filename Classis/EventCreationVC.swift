@@ -17,9 +17,10 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var dataHoraEvento: UIDatePicker!
     @IBOutlet weak var remuneracao: UISegmentedControl!
     @IBOutlet weak var precoEvento: UITextField!
+    @IBOutlet weak var descricaoEvento: UITextField!
     
     var tipoEventosArray:NSArray = []
-    var tipoEventoEscolhido:NSString
+    var tipoEventoEscolhido:NSString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +30,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         
         
-        tipoEventosArray = ["Aulas","Worshop","Aula Particular","Palestra","Serviços"]
+        tipoEventosArray = ["Aulas","Worshop","Serviços"]
+        
+  
         // Do any additional setup after loading the view.
     }
     
@@ -65,7 +68,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         }
     }
     
-    
+    //PickerView
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -79,8 +82,20 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
+        if tipoEvento == 0
+        {
+            tipoEventoEscolhido = tipoEventosArray[0] as NSString
+        }
+        if tipoEvento == 1
+        {
+            tipoEventoEscolhido = tipoEventosArray[1] as NSString
+        }
+        if tipoEvento == 2
+        {
+            tipoEventoEscolhido = tipoEventosArray[2] as NSString
+        }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
