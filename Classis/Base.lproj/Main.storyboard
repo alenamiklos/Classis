@@ -130,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="325" y="304"/>
         </scene>
-        <!--Item-->
+        <!--TimelineVC-->
         <scene sceneID="EXJ-1F-ila">
             <objects>
                 <tableViewController id="oaq-h9-SIP" customClass="TimelineVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
@@ -403,7 +403,7 @@
                             <outlet property="delegate" destination="oaq-h9-SIP" id="CmR-5V-xIs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="kzE-oA-Ja2"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="kzE-oA-Ja2"/>
                     <navigationItem key="navigationItem" id="bbU-Sb-PfS"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="gE3-O4-mcb" id="Ug3-3l-Rf6"/>
@@ -1342,11 +1342,11 @@
             </objects>
             <point key="canvasLocation" x="2722.5" y="940.5"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="0WJ-6n-FUC">
             <objects>
                 <navigationController id="QuQ-63-OJe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pXP-am-Phg"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="pXP-am-Phg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KOo-bd-M2M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
