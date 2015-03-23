@@ -40,17 +40,17 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBAction func confirmarEventoButton(sender: UIButton) {
         //crisEventos(titulo: nomeEvento.text, tipoEvento: "Aula", dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
         
-        var evento = Evento(titulo: nomeEvento.text,
-            tipoEvento: tipoEvento, //picker
-            descEvento: descEvento.text,
-            dataHora: dataHoraEvento,
-            tipoRemuneracao: tipoRemuneracao, //picker
-            preco: precoEvento.text,
-            local: localEvento.text,
-            imagem: nil,
-            responsavel:jordan,
-            areaConhecimento: areaConhecimento.text, //criar
-            media: nil)
+//        var evento = Evento(titulo: nomeEvento.text,
+//            tipoEvento: tipoEvento, //picker
+//            descEvento: descEvento.text,
+//            dataHora: dataHoraEvento,
+//            tipoRemuneracao: tipoRemuneracao, //picker
+//            preco: precoEvento.text,
+//            local: localEvento.text,
+//            imagem: nil,
+//            responsavel:jordan,
+//            areaConhecimento: areaConhecimento.text, //criar
+//            media: nil)
 
         
     }
@@ -92,11 +92,6 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return "\(tipoEventosArray[row])"
     }
-    
-
-//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        <#code#>
-//    }
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if tipoEvento == 0
