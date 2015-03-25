@@ -406,6 +406,7 @@
                     <tabBarItem key="tabBarItem" systemItem="featured" id="kzE-oA-Ja2"/>
                     <navigationItem key="navigationItem" id="bbU-Sb-PfS"/>
                     <connections>
+                        <outlet property="searchBar" destination="vW1-Fn-D6g" id="Ql4-66-pXK"/>
                         <outlet property="searchDisplayController" destination="gE3-O4-mcb" id="Ug3-3l-Rf6"/>
                         <outlet property="timeLine" destination="Tjr-QG-cey" id="Jx0-DA-cdz"/>
                     </connections>

@@ -10,11 +10,15 @@ import UIKit
 
 
 
-class TimelineVC: UITableViewController {
+class TimelineVC: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     @IBOutlet var timeLine: UITableView!
-    var listaEventos: [Evento]! = []
+    var listaEventos = [Evento]()
     var dao: DAO = DAO()
+    
+    var filteredEventos = [Evento]()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
@@ -23,9 +27,9 @@ class TimelineVC: UITableViewController {
         println(self.dao)
         //self.listaEventos = []
         
-        self.listaEventos? = self.dao.listaEventos(nil, usuario: nil)
+        listaEventos = self.dao.listaEventos(nil, usuario: nil)
         print("Eventos: ")
-        println(self.listaEventos?.count)
+        println(listaEventos.count)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -33,7 +37,29 @@ class TimelineVC: UITableViewController {
         timeLine.reloadData()
         
     }
-
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All"){
+        self.filteredEventos = self.listaEventos.filter ({ (evento: Evento) -> Bool in
+            let tituloMatch = (scope == "All") || (evento.descEvento == scope)
+            let stringMatch = evento.titulo.rangeOfString(searchText)
+            return tituloMatch && (stringMatch != nil)
+        })
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.filterContentForSearchText(searchString)
+        return true
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 127;
+    }
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> TimeLineTableViewCell
     {
@@ -48,7 +74,7 @@ class TimelineVC: UITableViewController {
         @IBOutlet weak var PrecoEvento: UILabel! */
         
         var cell = timeLine.dequeueReusableCellWithIdentifier("celulaTimeline") as TimeLineTableViewCell
-        let eventoAtual = self.listaEventos![indexPath.row]
+        let eventoAtual = self.listaEventos[indexPath.row]
         
         cell.NomeEvento.text? = eventoAtual.titulo
         cell.DescricaoEvento?.text = eventoAtual.descEvento
@@ -59,7 +85,10 @@ class TimelineVC: UITableViewController {
         
         return cell
     }
-
+    
+    //Search Bar
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -68,9 +97,9 @@ class TimelineVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var i = 0
-        if (self.listaEventos != nil) {
-            if (self.listaEventos?.count > 0) {
-                i = self.listaEventos!.count
+        if (listaEventos.count != 0) {
+            if (self.listaEventos.count > 0) {
+                i = self.listaEventos.count
                 
                 
             }
