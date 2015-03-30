@@ -101,5 +101,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
     }
-    
+        
 }
