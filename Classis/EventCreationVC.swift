@@ -31,7 +31,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         scroller.scrollEnabled = true
         scroller.contentSize = CGSizeMake(370, 1000)
         
-        
+        dataHoraEvento.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
         tipoEventosArray = ["Aulas","Worshop","Serviços"]
         
@@ -126,7 +126,14 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             tipoEventoEscolhido = tipoEventosArray[2] as NSString
         }
     }
-
+    
+    func datePickerChanged ( datePicker : UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        var strDate = dateFormatter.stringFromDate(datePicker.date)
+    }
     
     
     override func didReceiveMemoryWarning() {

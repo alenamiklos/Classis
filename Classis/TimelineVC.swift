@@ -78,7 +78,6 @@ class TimelineVC: UITableViewController, UISearchBarDelegate, UISearchDisplayDel
         
         cell.NomeEvento.text? = eventoAtual.titulo
         cell.DescricaoEvento?.text = eventoAtual.descEvento
-        //cell.ImageEvento.image = UIImage(named: eventoAtual.imagem!)
         cell.TipoEvento.text? = eventoAtual.tipoEvento
         cell.LocalEvento.text = eventoAtual.local
         cell.PrecoEvento.text = eventoAtual.preco?

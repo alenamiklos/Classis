@@ -56,6 +56,9 @@ class CalendarVC: UIViewController {
         
         super.viewDidLoad()
         
+        // resolver cor
+        self.navigationController?.navigationBar.barTintColor = UIColor(rgba: "#234a80")
+        
         // Obter o dispositivo atualmente em execução ( largura e altura da tela)
         let screenWidth  = DeviseSize.screenWidth()
         let screenHeight = DeviseSize.screenHeight()
@@ -207,27 +210,15 @@ class CalendarVC: UIViewController {
                 CGFloat(calendarLabelHeight)
             )
             
-            //Especifica os domingo como vermelho
-            if(i == 0){
-                
-                //Setandoo RGB da cor vermelha
+            //Setando as cores cabeçalho do calendário
+            if(i == 0 || i==6){
                 calendarBaseLabel.textColor = UIColor(
-                    red: CGFloat(0.831), green: CGFloat(0.349), blue: CGFloat(0.224), alpha: CGFloat(1.0)
+                    red: CGFloat(0.137), green: CGFloat(0.290), blue: CGFloat(0.501), alpha: CGFloat(1.0)
                 )
-                
-                //Especifica os sábados como azul
-            }else if(i == 6){
-                
-                //Setando RGB da cor azul
-                calendarBaseLabel.textColor = UIColor(
-                    red: CGFloat(0.400), green: CGFloat(0.471), blue: CGFloat(0.980), alpha: CGFloat(1.0)
-                )
-                
-                //Especifica de segunda a sexta como cinza
             }else{
-                
-                //Setando RGB da cor cinza
-                calendarBaseLabel.textColor = UIColor.lightGrayColor()
+                calendarBaseLabel.textColor = UIColor(
+                    red: CGFloat(0.529), green: CGFloat(0.403), blue: CGFloat(0.513), alpha: CGFloat(1.0)
+                )
                 
             }
             
@@ -286,17 +277,14 @@ class CalendarVC: UIViewController {
             }
             
             //Definir o esquema de cores do botão
-            //@ Observação: Neste exemplo estamos a fazer um botão de Seien mas , a criação da imagem de fundo também é possível.
-            if(i % 7 == 0){
+            if(i % 7 == 0 || i % 7 == 6){
                 calendarBackGroundColor = UIColor(
-                    red: CGFloat(0.831), green: CGFloat(0.349), blue: CGFloat(0.224), alpha: CGFloat(1.0)
-                )
-            }else if(i % 7 == 6){
-                calendarBackGroundColor = UIColor(
-                    red: CGFloat(0.400), green: CGFloat(0.471), blue: CGFloat(0.980), alpha: CGFloat(1.0)
+                    red: CGFloat(0.372), green: CGFloat(0.360), blue: CGFloat(0.509), alpha: CGFloat(1.0)
                 )
             }else{
-                calendarBackGroundColor = UIColor.lightGrayColor()
+                calendarBackGroundColor = UIColor(
+                    red: CGFloat(0.529), green: CGFloat(0.403), blue: CGFloat(0.513), alpha: CGFloat(1.0)
+                )
             }
             
             //Setando o botão
@@ -317,7 +305,7 @@ class CalendarVC: UIViewController {
     
     //título do calendário
     func setupCalendarTitleLabel() {
-        calendarBar.text = String("\(day)/\(month)/\(year) - Classis")
+        calendarBar.text = String("\(day)/\(month)/\(year)")
     }
     
     //Função corrente para recuperar os dados correspondentes para os anos de ( no momento da exibição inicial )
