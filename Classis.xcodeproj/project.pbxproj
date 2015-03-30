@@ -12,9 +12,11 @@
 		33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */; };
 		33143BF71AB8BA330026952F /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF61AB8BA330026952F /* DAO.swift */; };
 		339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */; };
+		33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B21AC9DA0D008B498A /* CalendarVC.swift */; };
+		33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B51AC9DB11008B498A /* DeviseSize.swift */; };
+		33C790BC1AC9DF89008B498A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C790BB1AC9DF89008B498A /* QuartzCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3A2F17F31AB81FAA0091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
-		3A2F17F61AB821480091489C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986D91AB22CEF0079EB56 /* Info.plist */; };
 		3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F71AB823CF0091489C /* UIColorExtension.swift */; };
 		3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F91AB8244D0091489C /* ClassisColor.swift */; };
 		3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575BF1AB8AB3D0067D357 /* Images.xcassets */; };
@@ -55,6 +57,9 @@
 		33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoUsuario.swift; sourceTree = "<group>"; };
 		33143BF61AB8BA330026952F /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		33C790B21AC9DA0D008B498A /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		33C790B51AC9DB11008B498A /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
+		33C790BB1AC9DF89008B498A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Lemon Yellow Sun.otf"; sourceTree = "<group>"; };
 		3A2F17F71AB823CF0091489C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3A2F17F91AB8244D0091489C /* ClassisColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassisColor.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 				3AA91E031AC1D2B500539474 /* ParseFacebookUtils.framework in Frameworks */,
 				3AA91E0C1AC1D47100539474 /* SystemConfiguration.framework in Frameworks */,
 				3AA91E0E1AC1D47100539474 /* libsqlite3.dylib in Frameworks */,
+				33C790BC1AC9DF89008B498A /* QuartzCore.framework in Frameworks */,
 				3AA91E001AC1D2B500539474 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33C790B41AC9DACB008B498A /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				33C790B21AC9DA0D008B498A /* CalendarVC.swift */,
+				33C790B51AC9DB11008B498A /* DeviseSize.swift */,
+			);
+			name = Calendario;
+			sourceTree = "<group>";
+		};
 		3AA91DFA1AC1D29900539474 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +147,7 @@
 		3F6986CC1AB22CEF0079EB56 = {
 			isa = PBXGroup;
 			children = (
+				33C790BB1AC9DF89008B498A /* QuartzCore.framework */,
 				3F6986D71AB22CEF0079EB56 /* Classis */,
 				3F6986ED1AB22CEF0079EB56 /* ClassisTests */,
 				3F6986D61AB22CEF0079EB56 /* Products */,
@@ -197,6 +213,7 @@
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
 				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
+				33C790B41AC9DACB008B498A /* Calendario */,
 				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 				3AD5964D1AB9C557007B9681 /* Eventos.plist */,
 			);
@@ -322,12 +339,14 @@
 				3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */,
 				3F6987021AB23AF40079EB56 /* EventCreationVC.swift in Sources */,
 				339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */,
+				33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */,
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
 				33143BF31AB8BA130026952F /* Evento.swift in Sources */,
 				3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */,
 				33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */,
 				33143BF11AB8B9E80026952F /* Usuario.swift in Sources */,
 				3F6987041AB23BAF0079EB56 /* TimelineVC.swift in Sources */,
+				33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
 				3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */,
 			);
