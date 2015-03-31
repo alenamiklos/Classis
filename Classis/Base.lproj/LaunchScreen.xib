@@ -10,35 +10,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ieW-W8-sfV">
-                    <rect key="frame" x="37" y="100" width="246" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="246" id="UCS-DP-QGW"/>
-                        <constraint firstAttribute="height" constant="100" id="fmk-4n-BgX"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xib" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-q9-feV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nomes" translatesAutoresizingMaskIntoConstraints="NO" id="sED-o5-XQT">
-                    <rect key="frame" x="59" y="324" width="203" height="144"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditos.png" translatesAutoresizingMaskIntoConstraints="NO" id="sED-o5-XQT">
+                    <rect key="frame" x="59" y="370" width="203" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="144" id="afY-bA-CdG"/>
-                        <constraint firstAttribute="width" constant="203" id="rtp-Je-aM4"/>
+                        <constraint firstAttribute="height" constant="128" id="PKk-UO-WdF"/>
+                        <constraint firstAttribute="width" constant="203" id="mES-ly-sNs"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="0.53333333333333333" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="sED-o5-XQT" secondAttribute="centerY" constant="-112" id="6O1-V9-w0X"/>
-                <constraint firstAttribute="centerX" secondItem="ieW-W8-sfV" secondAttribute="centerX" id="B5m-vJ-5tQ"/>
-                <constraint firstAttribute="centerX" secondItem="sED-o5-XQT" secondAttribute="centerX" id="diM-uE-U6C"/>
-                <constraint firstAttribute="centerY" secondItem="ieW-W8-sfV" secondAttribute="centerY" constant="134" id="tag-Kc-wsR"/>
+                <constraint firstAttribute="centerY" secondItem="sED-o5-XQT" secondAttribute="centerY" constant="-150" id="KKO-Wt-avg"/>
+                <constraint firstAttribute="centerX" secondItem="sED-o5-XQT" secondAttribute="centerX" id="NGf-WG-f7H"/>
+                <constraint firstAttribute="bottom" secondItem="Z1i-q9-feV" secondAttribute="bottom" id="Sdz-Fm-yfy"/>
+                <constraint firstItem="Z1i-q9-feV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ao9-Dw-iYp"/>
+                <constraint firstItem="Z1i-q9-feV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e6j-NX-9Ro"/>
+                <constraint firstAttribute="trailing" secondItem="Z1i-q9-feV" secondAttribute="trailing" id="pdZ-QX-nD9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="528" y="393"/>
         </view>
     </objects>
     <resources>
-        <image name="logo" width="370" height="150"/>
-        <image name="nomes" width="360" height="255"/>
+        <image name="creditos.png" width="1752" height="1045"/>
+        <image name="xib" width="638" height="1134"/>
     </resources>
 </document>

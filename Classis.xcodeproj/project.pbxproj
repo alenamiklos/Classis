@@ -31,6 +31,10 @@
 		3AA91E0D1AC1D47100539474 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91E081AC1D47000539474 /* AudioToolbox.framework */; };
 		3AA91E0E1AC1D47100539474 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91E091AC1D47000539474 /* libsqlite3.dylib */; };
 		3AD5964E1AB9C557007B9681 /* Eventos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5964D1AB9C557007B9681 /* Eventos.plist */; };
+		3F0250591ACB27C300226E9D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F0250581ACB27C300226E9D /* SofiaProLight.otf */; };
+		3F0250701ACB379800226E9D /* creditos.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02506F1ACB379800226E9D /* creditos.png */; };
+		3F0250721ACB3B0000226E9D /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0250711ACB3B0000226E9D /* perfil.png */; };
+		3F0250741ACB44CD00226E9D /* CadastroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0250731ACB44CD00226E9D /* CadastroVC.swift */; };
 		3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */; };
 		3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */; };
 		3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6986DE1AB22CEF0079EB56 /* Main.storyboard */; };
@@ -75,6 +79,10 @@
 		3AA91E081AC1D47000539474 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3AA91E091AC1D47000539474 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		3AD5964D1AB9C557007B9681 /* Eventos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Eventos.plist; sourceTree = "<group>"; };
+		3F0250581ACB27C300226E9D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
+		3F02506F1ACB379800226E9D /* creditos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditos.png; sourceTree = "<group>"; };
+		3F0250711ACB3B0000226E9D /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
+		3F0250731ACB44CD00226E9D /* CadastroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroVC.swift; sourceTree = "<group>"; };
 		3F6986D51AB22CEF0079EB56 /* Classis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6986D91AB22CEF0079EB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +152,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F02505A1ACB282300226E9D /* telas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = telas;
+			sourceTree = "<group>";
+		};
 		3F6986CC1AB22CEF0079EB56 = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +185,9 @@
 				3F6986DA1AB22CEF0079EB56 /* AppDelegate.swift */,
 				3F6986FA1AB2389D0079EB56 /* Control */,
 				3F6986DE1AB22CEF0079EB56 /* Main.storyboard */,
+				3F0250711ACB3B0000226E9D /* perfil.png */,
 				3F6986E31AB22CEF0079EB56 /* LaunchScreen.xib */,
+				3F02506F1ACB379800226E9D /* creditos.png */,
 				3F6986D81AB22CEF0079EB56 /* Supporting Files */,
 			);
 			path = Classis;
@@ -199,6 +216,8 @@
 		3F6986EE1AB22CEF0079EB56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F02505A1ACB282300226E9D /* telas */,
+				3F0250581ACB27C300226E9D /* SofiaProLight.otf */,
 				3F6986EF1AB22CEF0079EB56 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -211,6 +230,7 @@
 				3F6986DC1AB22CEF0079EB56 /* LoginVC.swift */,
 				3F6987011AB23AF40079EB56 /* EventCreationVC.swift */,
 				3F6987031AB23BAF0079EB56 /* TimelineVC.swift */,
+				3F0250731ACB44CD00226E9D /* CadastroVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
 				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
 				33C790B41AC9DACB008B498A /* Calendario */,
@@ -280,7 +300,7 @@
 				TargetAttributes = {
 					3F6986D41AB22CEF0079EB56 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5PB9YGMJA7;
+						DevelopmentTeam = GMC28UA2B8;
 					};
 					3F6986E91AB22CEF0079EB56 = {
 						CreatedOnToolsVersion = 6.2;
@@ -312,8 +332,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0250721ACB3B0000226E9D /* perfil.png in Resources */,
 				3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */,
 				3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */,
+				3F0250701ACB379800226E9D /* creditos.png in Resources */,
 				3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */,
 				3F6986E51AB22CEF0079EB56 /* LaunchScreen.xib in Resources */,
 				3AD5964E1AB9C557007B9681 /* Eventos.plist in Resources */,
@@ -325,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2F17F31AB81FAA0091489C /* DK Lemon Yellow Sun.otf in Resources */,
+				3F0250591ACB27C300226E9D /* SofiaProLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +365,7 @@
 				33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */,
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
 				33143BF31AB8BA130026952F /* Evento.swift in Sources */,
+				3F0250741ACB44CD00226E9D /* CadastroVC.swift in Sources */,
 				3F6986DD1AB22CEF0079EB56 /* LoginVC.swift in Sources */,
 				33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */,
 				33143BF11AB8B9E80026952F /* Usuario.swift in Sources */,
