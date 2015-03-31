@@ -14,7 +14,7 @@ class DAO {
     func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
     {
         var listaFake = [Evento]()
-        var jordan: Usuario = Usuario(id: 1,nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        var jordan: Usuario = Usuario(id: "1",nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         
         println("Entrando na lista de eventos...")
         
@@ -97,7 +97,7 @@ class DAO {
     
     func buscaUsuario(id: String) -> Usuario
     {
-        var usuarioAchado : Usuario = Usuario.self
+        var usuarioAchado : Usuario = Usuario(id: "", nome: "", curso: "", habilidades: [""], foto: nil, avaliacoes: nil)
         
         var query = PFQuery(className:"GameScore")
         query.whereKey("objectId", equalTo:id)

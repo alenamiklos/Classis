@@ -22,7 +22,7 @@ class Usuario
 //   var nome: String? tem ou não
 
     
-    init(id: Int,nome: String, curso: String, habilidades: [String], foto: UIImage?, avaliacoes: [AvaliacaoUsuario]? ){
+    init(id: String,nome: String, curso: String, habilidades: [String], foto: UIImage?, avaliacoes: [AvaliacaoUsuario]? ){
             self.id = id
             self.nome = nome
             self.curso = curso

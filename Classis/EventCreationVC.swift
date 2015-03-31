@@ -54,7 +54,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
 //            responsavel:jordan,
 //            areaConhecimento: areaConhecimento.text, //criar
 //            media: nil)
-        var jordan: Usuario = Usuario(id:1, nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        var jordan: Usuario = Usuario(id:"1", nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         var data: NSDate = NSDate()
     
         var evento = Evento(titulo: nomeEvento.text,
