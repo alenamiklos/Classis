@@ -65,7 +65,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             preco: precoEvento.text,
             local: localEvento.text,
             imagem: nil,
-            responsavel:jordan,
+            responsavel:"",
             participantes:nil,
             areaConhecimento: "Programação", //criar
             media: nil)

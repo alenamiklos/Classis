@@ -59,7 +59,8 @@ class DAO {
                 preco: object["preco"] as? String,
                 local: object["localEvento"] as String,
                 imagem: object["imagem"] as? String,
-                responsavel:jordan, participantes: nil,
+                responsavel:"",
+                participantes: nil,
                 areaConhecimento: object["areaConhecimento"] as String,
                 media: nil)
             println(evento)
@@ -125,6 +126,11 @@ class DAO {
         }
         
          return usuarioAchado
+    }
+    
+    func buscarEvento()
+    {
+        
     }
     
     

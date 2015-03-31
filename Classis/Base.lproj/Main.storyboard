@@ -354,7 +354,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="DescricaoEvento" destination="LcL-nf-BJA" id="qx6-oH-uJH"/>
-                                    <outlet property="ImageEvento" destination="UeY-VG-drp" id="0f9-ef-iks"/>
                                     <outlet property="LocalEvento" destination="RMw-gL-RWM" id="j6h-kH-k6y"/>
                                     <outlet property="NomeEvento" destination="Wxx-fD-EMJ" id="ZCh-ct-9vI"/>
                                     <outlet property="PrecoEvento" destination="x5J-0f-Moz" id="42g-z6-T94"/>
@@ -1317,7 +1316,6 @@
         <!--Navigation Controller-->
         <scene sceneID="0WJ-6n-FUC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KU4-OY-78D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="QuQ-63-OJe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="pXP-am-Phg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KOo-bd-M2M">
@@ -1328,6 +1326,7 @@
                         <segue destination="ONf-Dd-KU3" kind="relationship" relationship="rootViewController" id="ZNt-3e-5yi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KU4-OY-78D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1995" y="-288"/>
         </scene>
@@ -1340,6 +1339,7 @@
                         <viewControllerLayoutGuide type="bottom" id="K3S-zg-hyo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v53-0v-chU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1555,12 +1555,12 @@
                                 <exclude reference="YA4-0F-law"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="5od-Ae-X75"/>
+                                <exclude reference="jsf-yU-0t0"/>
                                 <exclude reference="O2R-aS-h8X"/>
                                 <exclude reference="ubu-tA-Uer"/>
                                 <exclude reference="7QX-0M-X0Y"/>
                                 <exclude reference="WLJ-Ac-V97"/>
-                                <exclude reference="5od-Ae-X75"/>
-                                <exclude reference="jsf-yU-0t0"/>
                                 <exclude reference="gvr-WE-Wf3"/>
                                 <exclude reference="w05-TM-NLZ"/>
                             </mask>
@@ -1573,12 +1573,12 @@
                                 <include reference="YA4-0F-law"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="5od-Ae-X75"/>
+                                <include reference="jsf-yU-0t0"/>
                                 <include reference="O2R-aS-h8X"/>
                                 <include reference="ubu-tA-Uer"/>
                                 <include reference="7QX-0M-X0Y"/>
                                 <include reference="WLJ-Ac-V97"/>
-                                <include reference="5od-Ae-X75"/>
-                                <include reference="jsf-yU-0t0"/>
                                 <include reference="gvr-WE-Wf3"/>
                                 <include reference="w05-TM-NLZ"/>
                             </mask>
