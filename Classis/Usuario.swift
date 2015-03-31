@@ -11,7 +11,7 @@ import UIKit
 
 class Usuario
 {
-    var id: Int
+    var id: String
     var nome: String
     var curso: String
     var habilidades: [String] // lista de String
