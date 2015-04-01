@@ -354,7 +354,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="DescricaoEvento" destination="LcL-nf-BJA" id="qx6-oH-uJH"/>
-                                    <outlet property="ImageEvento" destination="UeY-VG-drp" id="0f9-ef-iks"/>
                                     <outlet property="LocalEvento" destination="RMw-gL-RWM" id="j6h-kH-k6y"/>
                                     <outlet property="NomeEvento" destination="Wxx-fD-EMJ" id="ZCh-ct-9vI"/>
                                     <outlet property="PrecoEvento" destination="x5J-0f-Moz" id="42g-z6-T94"/>

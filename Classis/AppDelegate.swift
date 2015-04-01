@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // ParseCrashReporting.enable()
         //
         // Uncomment and fill in with your Parse credentials:
-         Parse.setApplicationId("gPV84k5HGA7EsOaV3nX9u5RFtZSKLbSs5okEcf02", clientKey: "OmYE8H7SCIXZQg6A61JiqZ2KtwMG4kEFpod2wVtr")
+        Parse.setApplicationId("gPV84k5HGA7EsOaV3nX9u5RFtZSKLbSs5okEcf02", clientKey: "OmYE8H7SCIXZQg6A61JiqZ2KtwMG4kEFpod2wVtr")
         //
         // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
         // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
@@ -67,6 +67,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotificationTypes(types)
         }
         
+        var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
+        var path2 = pathAux.stringByAppendingPathComponent("Usuarios.plist")
+        var fileManager = NSFileManager.defaultManager()
+        
+        if (!(fileManager.fileExistsAtPath(path)))
+        {
+            var bundle : NSString! = NSBundle.mainBundle().pathForResource("Eventos", ofType: "plist")
+            fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
+        }
+        
+        if (!(fileManager.fileExistsAtPath(path2)))
+        {
+            var bundle : NSString! = NSBundle.mainBundle().pathForResource("Usuarios", ofType: "plist")
+            fileManager.copyItemAtPath(bundle as String, toPath: path2, error:nil)
+        }
+        
+        
+        
+        
+        
         return true
     }
     
@@ -102,5 +123,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
     }
-        
+    
 }

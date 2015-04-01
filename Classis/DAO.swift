@@ -57,7 +57,6 @@ class DAO {
                 tipoRemuneracao: object["tipoRemuneracao"] as String,
                 preco: object["preco"] as? String,
                 local: object["localEvento"] as String,
-                imagem: object["imagem"] as? String,
                 responsavel:"",
                 participantes: nil,
                 areaConhecimento: object["areaConhecimento"] as String,
@@ -77,16 +76,31 @@ class DAO {
     
     func criarEvento(evento: Evento) -> Bool
     {
+        
+        
+        println("Adicinando evneto...")
+        
         var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
         var fileManager = NSFileManager.defaultManager()
         
         var data : NSMutableArray! = NSMutableArray(contentsOfFile: path)
         
-        var temp : [String: String] = ["titulo": evento.titulo,
-            "tipoEvento": evento.tipoEvento]
+        var temp : Dictionary = [
+            "titulo": evento.titulo,
+            "tipoEvento": evento.tipoEvento,
+            "descEvento": evento.descEvento,
+            "dataHora": "",
+            "tipoRemuneracao": evento.tipoRemuneracao,
+            "preco": evento.preco,
+            "localEvento": evento.local,
+            "responsavel": "rhejt",
+            "areaConhecimento": evento.areaConhecimento
+            ]
         
-        data.addObject(temp)
+        
+        //data.addObject(evento)
+        
         data.writeToFile(path, atomically: false)
         println(data)
         
@@ -95,37 +109,55 @@ class DAO {
         
     }
     
-//    func buscaUsuario(id: String) -> Usuario
-//    {
-////        var usuarioAchado : Usuario = Usuario(id: "", nome: "", curso: "", habilidades: [""], foto: nil, avaliacoes: nil)
-////        
-////        var query = PFQuery(className:"GameScore")
-////        query.whereKey("objectId", equalTo:id)
-////        query.findObjectsInBackgroundWithBlock {
-////            (objects: [AnyObject]!, error: NSError!) -> Void in
-////            if error == nil {
-////                
-////                // The find succeeded.
-////                println("Successfully retrieved \(objects.count) scores.")
-////                
-////                // Do something with the found objects
-////                if let objects = objects as? [PFObject] {
-////                    for object in objects {
-////                        usuarioAchado.id = object.objectId
-////                        usuarioAchado.nome = object["nome"] as String
-////                        usuarioAchado.habilidades = object["habilidades"] as [String]
-////                        
-////                        
-////                    }
-////                }
-////            } else {
-////                // Log details of the failure
-////                println("Error: \(error) \(error.userInfo!)")
-////            }
-////        }
-////        
-////         return usuarioAchado
-//    }
+    func listaUsuarios() -> [Usuario]
+    {
+       var listaUsuarios = [Usuario]()
+        
+        let dict : NSMutableArray! = NSMutableArray(contentsOfFile: NSHomeDirectory() + "/Documents/Usuarios.plist")
+        
+        println(dict.count)
+        
+        for var i = 0; i < dict.count; i++
+        {
+            let object = dict[i] as NSDictionary
+            println(object)
+            
+            var usuarioAchado : Usuario = Usuario(
+                id: object["id"] as String,
+                nome: object["nome"] as String,
+                curso: object["curso"] as String,
+                habilidades: object["habilidades"] as [String],
+                foto: nil,
+                avaliacoes: nil
+            )
+            
+            
+            println(usuarioAchado)
+            
+            listaUsuarios.append(usuarioAchado)
+        }
+
+        return listaUsuarios
+    }
+    
+    func buscaUsuario (idBuscado: String, lista: [Usuario]) -> Usuario
+    {
+        for var i = 0; i < lista.count; i++
+        {
+            let isEqual = (lista[0].id == idBuscado)
+            
+            if (isEqual)
+            {
+                return lista[0]
+            }
+        
+        }
+        
+        
+        return lista[-1]
+    }
+    
+    
     
     func buscarEvento()
     {
@@ -138,3 +170,28 @@ class DAO {
     }
     
 }
+
+//        var query = PFQuery(className:"GameScore")
+//        query.whereKey("objectId", equalTo:id)
+//        query.findObjectsInBackgroundWithBlock {
+//            (objects: [AnyObject]!, error: NSError!) -> Void in
+//            if error == nil {
+//
+//                // The find succeeded.
+//                println("Successfully retrieved \(objects.count) scores.")
+//
+//                // Do something with the found objects
+//                if let objects = objects as? [PFObject] {
+//                    for object in objects {
+//                        usuarioAchado.id = object.objectId
+//                        usuarioAchado.nome = object["nome"] as String
+//                        usuarioAchado.habilidades = object["habilidades"] as [String]
+//
+//
+//                    }
+//                }
+//            } else {
+//                // Log details of the failure
+//                println("Error: \(error) \(error.userInfo!)")
+//            }
+//        }

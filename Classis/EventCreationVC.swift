@@ -24,6 +24,8 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     var tipoEventosArray:NSArray = []
     var tipoEventoEscolhido:NSString = ""
     var tipoRemuneracaoEscolhido:NSString = ""
+    var strDate : NSDate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,17 +56,16 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
 //            responsavel:jordan,
 //            areaConhecimento: areaConhecimento.text, //criar
 //            media: nil)
-        var jordan: Usuario = Usuario(id:"1", nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        
         var data: NSDate = NSDate()
     
         var evento = Evento(titulo: nomeEvento.text,
-            tipoEvento: tipoEventoEscolhido, //picker
+            tipoEvento: tipoEventoEscolhido,
             descEvento: descricaoEvento.text,
-            dataHora: data,
-            tipoRemuneracao: tipoRemuneracaoEscolhido, //picker
+            dataHora: strDate,
+            tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
             local: localEvento.text,
-            imagem: nil,
             responsavel:"",
             participantes:nil,
             areaConhecimento: "Programação", //criar

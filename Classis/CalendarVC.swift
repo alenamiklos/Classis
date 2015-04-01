@@ -86,7 +86,7 @@ class CalendarVC: UIViewController {
             self.prevMonthButton.frame = CGRectMake(15, 438, CGFloat(calendarSize), CGFloat(calendarSize));
             self.nextMonthButton.frame = CGRectMake(314, 438, CGFloat(calendarSize), CGFloat(calendarSize));
             
-            //iPhone5またはiPhone5s
+            //iPhone5 e 5s
         }else if (screenWidth == 320 && screenHeight == 568){
             
             calendarLabelIntervalX = 5;
@@ -429,7 +429,7 @@ class CalendarVC: UIViewController {
         generateCalendar()
         setupCalendarTitleLabel()
         
-        println("Botão no mês anterior foi pressionado !")
+        println("Botão no mês anterior foi pressionado!")
     }
     
     // Ação quando você pressiona o botão do mês seguinte
@@ -440,7 +440,7 @@ class CalendarVC: UIViewController {
         generateCalendar()
         setupCalendarTitleLabel()
         
-        println("Botão do próximo mês foi pressionado !")
+        println("Botão do próximo mês foi pressionado!")
     }
     
     // Ação dos botões do calendário

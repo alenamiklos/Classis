@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>76549</string>
+		<key>nome</key>
+		<string>Usuario Teste</string>
+		<key>curso</key>
+		<string>BEPiD</string>
+		<key>habilidades</key>
+		<array>
+			<string>Objective-C</string>
+			<string>Swift</string>
+		</array>
+		<key>foto</key>
+		<string></string>
+		<key>media</key>
+		<real>9.5</real>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>rhejt</string>
+		<key>nome</key>
+		<string>Tester</string>
+		<key>curso</key>
+		<string>Infra</string>
+		<key>habilidades</key>
+		<array>
+			<string>Objective-C</string>
+			<string>Photoshop</string>
+		</array>
+		<key>foto</key>
+		<string></string>
+		<key>media</key>
+		<real>5</real>
+	</dict>
+</array>
+</plist>

@@ -15,6 +15,7 @@
 		33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B21AC9DA0D008B498A /* CalendarVC.swift */; };
 		33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B51AC9DB11008B498A /* DeviseSize.swift */; };
 		33C790BC1AC9DF89008B498A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C790BB1AC9DF89008B498A /* QuartzCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		33C790BE1ACC4BFF008B498A /* Usuarios.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33C790BD1ACC4BFF008B498A /* Usuarios.plist */; };
 		3A2A98441ACC235F00426DEF /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2A98331ACC235F00426DEF /* IQNSArray+Sort.swift */; };
 		3A2A98451ACC235F00426DEF /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2A98341ACC235F00426DEF /* IQUIView+Hierarchy.swift */; };
 		3A2A98461ACC235F00426DEF /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2A98351ACC235F00426DEF /* IQUIWindow+Hierarchy.swift */; };
@@ -77,6 +78,7 @@
 		33C790B21AC9DA0D008B498A /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		33C790B51AC9DB11008B498A /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
 		33C790BB1AC9DF89008B498A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		33C790BD1ACC4BFF008B498A /* Usuarios.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Usuarios.plist; sourceTree = "<group>"; };
 		3A2A982D1ACC224700426DEF /* Classis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Classis-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A2A98331ACC235F00426DEF /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		3A2A98341ACC235F00426DEF /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				33C790B41AC9DACB008B498A /* Calendario */,
 				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 				3AD5964D1AB9C557007B9681 /* Eventos.plist */,
+				33C790BD1ACC4BFF008B498A /* Usuarios.plist */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				3F0250721ACB3B0000226E9D /* perfil.png in Resources */,
 				3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */,
 				3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */,
+				33C790BE1ACC4BFF008B498A /* Usuarios.plist in Resources */,
 				3F0250701ACB379800226E9D /* creditos.png in Resources */,
 				3F6986E01AB22CEF0079EB56 /* Main.storyboard in Resources */,
 				3F6986E51AB22CEF0079EB56 /* LaunchScreen.xib in Resources */,
