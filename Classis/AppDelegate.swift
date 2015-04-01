@@ -67,17 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotificationTypes(types)
         }
         
-        var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
-        var fileManager = NSFileManager.defaultManager()
-        
-        if (!(fileManager.fileExistsAtPath(path)))
-        {
-            var bundle : NSString! = NSBundle.mainBundle().pathForResource("Eventos", ofType: "plist")
-            fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
-        }
-
-        
         return true
     }
     
