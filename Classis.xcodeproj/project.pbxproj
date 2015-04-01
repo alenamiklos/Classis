@@ -35,6 +35,7 @@
 		3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F91AB8244D0091489C /* ClassisColor.swift */; };
 		3A4F34BB1ACC6FF100D6246A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BA1ACC6FF100D6246A /* DAO.swift */; };
 		3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */; };
+		3A4F34BF1ACC7F6C00D6246A /* EstadoSistema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */; };
 		3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575BF1AB8AB3D0067D357 /* Images.xcassets */; };
 		3AA91E001AC1D2B500539474 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFB1AC1D2B500539474 /* Bolts.framework */; };
 		3AA91E011AC1D2B500539474 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFC1AC1D2B500539474 /* Parse.framework */; };
@@ -100,6 +101,7 @@
 		3A2F17F91AB8244D0091489C /* ClassisColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassisColor.swift; sourceTree = "<group>"; };
 		3A4F34BA1ACC6FF100D6246A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
+		3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoSistema.swift; sourceTree = "<group>"; };
 		3AA575BF1AB8AB3D0067D357 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AA91DFB1AC1D2B500539474 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3AA91DFC1AC1D2B500539474 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				3F0250731ACB44CD00226E9D /* CadastroVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
 				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
+				3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */,
 				33C790B41AC9DACB008B498A /* Calendario */,
 				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 				3AD5964D1AB9C557007B9681 /* Eventos.plist */,
@@ -484,6 +487,7 @@
 				3A2A98461ACC235F00426DEF /* IQUIWindow+Hierarchy.swift in Sources */,
 				3A2A98491ACC235F00426DEF /* IQKeyboardManager.swift in Sources */,
 				33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */,
+				3A4F34BF1ACC7F6C00D6246A /* EstadoSistema.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
 				3A4F34BB1ACC6FF100D6246A /* DAO.swift in Sources */,
 				3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */,

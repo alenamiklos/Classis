@@ -13,8 +13,8 @@ protocol DAO{
     func criarEvento(evento: Evento) -> Evento
     func listaUsuarios() -> [Usuario]
     func buscaUsuario (idBuscado: String) -> Usuario?
-    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]?
-    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]?
+//    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]?
+//    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]?
     func checkLogin(userLogin: String, userPass: String) -> Usuario?
-    func criarUsuario(novoUsuario: Usuario) -> Usuario?
+//    func criarUsuario(novoUsuario: Usuario) -> Usuario?
 }

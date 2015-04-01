@@ -3,6 +3,10 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>username</key>
+		<string>teste</string>
+		<key>senha</key>
+		<string>teste</string>
 		<key>id</key>
 		<string>76549</string>
 		<key>nome</key>
@@ -20,6 +24,10 @@
 		<real>9.5</real>
 	</dict>
 	<dict>
+		<key>username</key>
+		<string>infra</string>
+		<key>senha</key>
+		<string>infra</string>
 		<key>id</key>
 		<string>rhejt</string>
 		<key>nome</key>

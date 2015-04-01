@@ -10,9 +10,14 @@ import UIKit
 
 class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    required init(coder aDecoder: NSCoder) {
+        //fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+    }
+
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var nomeEvento: UITextField!
-    @IBOutlet weak var localEvento: UITextField!
+    //@IBOutlet weak var localEvento: UITextField
     @IBOutlet weak var tipoEvento: UIPickerView!
     @IBOutlet weak var dataHoraEvento: UIDatePicker!
     @IBOutlet weak var remuneracao: UISegmentedControl!
@@ -24,7 +29,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     var tipoEventosArray:NSArray = []
     var tipoEventoEscolhido:NSString = ""
     var tipoRemuneracaoEscolhido:NSString = ""
-    var strDate : NSDate
+    var strDate : NSDate = NSDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +70,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             dataHora: strDate,
             tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
-            local: localEvento.text,
+            local: "",//localEvento.text
             responsavel:"",
             participantes:nil,
             areaConhecimento: "Programação", //criar

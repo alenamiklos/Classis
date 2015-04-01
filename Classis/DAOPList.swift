@@ -88,7 +88,7 @@ class DAOPList: DAO {
         
         //retornar um evento
         
-        return temp;
+        return evento;
         
         
     }
@@ -109,6 +109,8 @@ class DAOPList: DAO {
             var usuarioAchado : Usuario = Usuario(
                 id: object["id"] as String,
                 nome: object["nome"] as String,
+                username: object["username"] as String,
+                senha: object["senha"] as String,
                 curso: object["curso"] as String,
                 habilidades: object["habilidades"] as [String],
                 foto: nil,
@@ -145,41 +147,41 @@ class DAOPList: DAO {
         return nil
     }
     
-    
-    
-    func buscarEvento() -> Evento?
+    func checkLogin(userLogin: String, userPass: String) -> Usuario?
     {
+        var lista : [Usuario]
+        lista = listaUsuarios()
+        
+        
+        for var i = 0; i < lista.count; i++
+        {
+            
+            let isEqual = (userLogin == lista[i].username && userPass == lista[i].senha)
+            
+            if (isEqual)
+            {
+                return lista[i]
+            }
+            
+        }
+        
+        return nil
         
     }
+
     
-    
-    func loginSuccessful() -> Bool {
-        return true
-    }
+//    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]? {
+//        
+//    }
+//    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]? {
+//        
+//    }
+//    func checkLogin(userLogin: String, userPass: String) -> Usuario? {
+//        
+//    }
+//    func criarUsuario(novoUsuario: Usuario) -> Usuario? {
+//        
+//    }
     
 }
 
-//        var query = PFQuery(className:"GameScore")
-//        query.whereKey("objectId", equalTo:id)
-//        query.findObjectsInBackgroundWithBlock {
-//            (objects: [AnyObject]!, error: NSError!) -> Void in
-//            if error == nil {
-//
-//                // The find succeeded.
-//                println("Successfully retrieved \(objects.count) scores.")
-//
-//                // Do something with the found objects
-//                if let objects = objects as? [PFObject] {
-//                    for object in objects {
-//                        usuarioAchado.id = object.objectId
-//                        usuarioAchado.nome = object["nome"] as String
-//                        usuarioAchado.habilidades = object["habilidades"] as [String]
-//
-//
-//                    }
-//                }
-//            } else {
-//                // Log details of the failure
-//                println("Error: \(error) \(error.userInfo!)")
-//            }
-//        }

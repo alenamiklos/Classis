@@ -12,12 +12,12 @@ import Parse
 
 class LoginVC: UIViewController {
 
-    @IBOutlet weak var cursoUsuario: UILabel!
-    @IBOutlet weak var imagemAvaliacao: UIImageView!
-    @IBOutlet weak var habilidadesTextView: UITextView!
-    @IBOutlet weak var nomeUsuario: UILabel!
-    @IBOutlet weak var eventosRealizadosUsuario: UIButton!
-    @IBOutlet weak var imagemUsuario: UIImageView!
+    @IBOutlet weak var campoUsuario: UITextField!
+
+    @IBOutlet weak var campoSenha: UITextField!
+    
+    var dao : DAO = DAOFactory.getDAOInstance()
+    var estadoSistema : EstadoSistema = EstadoSistema.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +43,21 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func loginWithUsername(sender: AnyObject) {
+        var usuario : Usuario?
+        usuario = dao.checkLogin(campoUsuario.text, userPass: campoSenha.text)
+        if (usuario == nil)
+        {
+            estadoSistema.usuarioLogado = nil
+            //TODO: enviar mensagem de erro ao usuário
+        }
+        else
+        {
+            estadoSistema.usuarioLogado = usuario
+            self.performSegueWithIdentifier("logado", sender: self)
+        }
         
-        self.performSegueWithIdentifier("logado", sender: self)
+        
     }
     
-    @IBAction func loginWithFacebook(sender: AnyObject) {
-        
-        self.performSegueWithIdentifier("logado", sender: self)
-        
-    }
-
 }
 
