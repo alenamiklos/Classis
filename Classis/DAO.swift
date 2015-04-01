@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class DAO {
     
@@ -96,37 +95,37 @@ class DAO {
         
     }
     
-    func buscaUsuario(id: String) -> Usuario
-    {
-        var usuarioAchado : Usuario = Usuario(id: "", nome: "", curso: "", habilidades: [""], foto: nil, avaliacoes: nil)
-        
-        var query = PFQuery(className:"GameScore")
-        query.whereKey("objectId", equalTo:id)
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                
-                // The find succeeded.
-                println("Successfully retrieved \(objects.count) scores.")
-                
-                // Do something with the found objects
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        usuarioAchado.id = object.objectId
-                        usuarioAchado.nome = object["nome"] as String
-                        usuarioAchado.habilidades = object["habilidades"] as [String]
-                        
-                        
-                    }
-                }
-            } else {
-                // Log details of the failure
-                println("Error: \(error) \(error.userInfo!)")
-            }
-        }
-        
-         return usuarioAchado
-    }
+//    func buscaUsuario(id: String) -> Usuario
+//    {
+////        var usuarioAchado : Usuario = Usuario(id: "", nome: "", curso: "", habilidades: [""], foto: nil, avaliacoes: nil)
+////        
+////        var query = PFQuery(className:"GameScore")
+////        query.whereKey("objectId", equalTo:id)
+////        query.findObjectsInBackgroundWithBlock {
+////            (objects: [AnyObject]!, error: NSError!) -> Void in
+////            if error == nil {
+////                
+////                // The find succeeded.
+////                println("Successfully retrieved \(objects.count) scores.")
+////                
+////                // Do something with the found objects
+////                if let objects = objects as? [PFObject] {
+////                    for object in objects {
+////                        usuarioAchado.id = object.objectId
+////                        usuarioAchado.nome = object["nome"] as String
+////                        usuarioAchado.habilidades = object["habilidades"] as [String]
+////                        
+////                        
+////                    }
+////                }
+////            } else {
+////                // Log details of the failure
+////                println("Error: \(error) \(error.userInfo!)")
+////            }
+////        }
+////        
+////         return usuarioAchado
+//    }
     
     func buscarEvento()
     {

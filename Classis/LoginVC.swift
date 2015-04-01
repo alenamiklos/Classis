@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 
+
 class LoginVC: UIViewController {
 
     @IBOutlet weak var cursoUsuario: UILabel!
@@ -21,6 +22,14 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "xib")?.drawInRect(self.view.bounds)
+        
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
         
         var object = PFObject(className: "TestClass")
         object.addObject("Banana", forKey: "favoriteFood")
@@ -33,6 +42,16 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginWithUsername(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("logado", sender: self)
+    }
+    
+    @IBAction func loginWithFacebook(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("logado", sender: self)
+        
+    }
 
 }
 
