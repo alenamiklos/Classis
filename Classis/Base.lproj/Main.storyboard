@@ -283,7 +283,7 @@
             </objects>
             <point key="canvasLocation" x="324" y="303.75"/>
         </scene>
-        <!--TimelineVC-->
+        <!--Lista de Eventos-->
         <scene sceneID="EXJ-1F-ila">
             <objects>
                 <tableViewController id="oaq-h9-SIP" customClass="TimelineVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
@@ -521,7 +521,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="kzE-oA-Ja2"/>
-                    <navigationItem key="navigationItem" id="bbU-Sb-PfS"/>
+                    <navigationItem key="navigationItem" title="Lista de Eventos" id="6hA-pZ-FIV"/>
                     <connections>
                         <outlet property="searchBar" destination="vW1-Fn-D6g" id="Ql4-66-pXK"/>
                         <outlet property="searchDisplayController" destination="gE3-O4-mcb" id="Ug3-3l-Rf6"/>
@@ -541,7 +541,7 @@
             </objects>
             <point key="canvasLocation" x="2805" y="303.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhes-->
         <scene sceneID="I4d-oy-K4h">
             <objects>
                 <viewController id="QvT-Gg-E9y" sceneMemberID="viewController">
@@ -554,7 +554,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qpQ-FA-AT7"/>
+                    <navigationItem key="navigationItem" title="Detalhes" id="PNC-8f-E9U"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNd-d7-960" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1139,7 +1139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKg-cJ-jrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3403.5" y="1408.5"/>
+            <point key="canvasLocation" x="3492" y="1408.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dFS-ft-al3">
@@ -1394,7 +1394,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="trl-Ep-FTs"/>
-                    <navigationItem key="navigationItem" id="4Ar-DP-oMe"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="7hy-QD-iTu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cursoUsuario" destination="ghp-qH-jBU" id="4Sa-VE-KZn"/>
@@ -1638,33 +1638,6 @@
                                     <action selector="getNextMonthData:" destination="08o-og-nsg" eventType="touchUpInside" id="Y3O-O6-03Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hck-yP-s2q">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.13725490196078433" green="0.29019607843137252" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Z4U-SP-QcU"/>
-                                    <constraint firstAttribute="width" constant="118" id="eH1-39-WdN"/>
-                                </constraints>
-                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Novo Evento">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Z4U-SP-QcU"/>
-                                        <exclude reference="eH1-39-WdN"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Z4U-SP-QcU"/>
-                                        <include reference="eH1-39-WdN"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="0OA-ng-fYH" kind="show" id="atR-Cl-qjL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-0F-law">
                                 <rect key="frame" x="0.0" y="65" width="320" height="25"/>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.29019607843137257" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1691,7 +1664,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="hck-yP-s2q" secondAttribute="centerX" id="5od-Ae-X75"/>
                             <constraint firstAttribute="centerX" secondItem="aDR-OZ-kCB" secondAttribute="centerX" id="7QX-0M-X0Y">
                                 <variation key="heightClass=regular-widthClass=compact" constant="137"/>
                             </constraint>
@@ -1700,9 +1672,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="-180"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="Ylr-3S-ftF" secondAttribute="centerY" id="gvr-WE-Wf3">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-180"/>
-                            </constraint>
-                            <constraint firstAttribute="centerY" secondItem="hck-yP-s2q" secondAttribute="centerY" id="jsf-yU-0t0">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-180"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="YA4-0F-law" secondAttribute="centerY" id="ubu-tA-Uer">
@@ -1716,12 +1685,9 @@
                             <mask key="subviews">
                                 <exclude reference="aDR-OZ-kCB"/>
                                 <exclude reference="Ylr-3S-ftF"/>
-                                <exclude reference="hck-yP-s2q"/>
                                 <exclude reference="YA4-0F-law"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5od-Ae-X75"/>
-                                <exclude reference="jsf-yU-0t0"/>
                                 <exclude reference="O2R-aS-h8X"/>
                                 <exclude reference="ubu-tA-Uer"/>
                                 <exclude reference="7QX-0M-X0Y"/>
@@ -1734,12 +1700,9 @@
                             <mask key="subviews">
                                 <include reference="aDR-OZ-kCB"/>
                                 <include reference="Ylr-3S-ftF"/>
-                                <include reference="hck-yP-s2q"/>
                                 <include reference="YA4-0F-law"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5od-Ae-X75"/>
-                                <include reference="jsf-yU-0t0"/>
                                 <include reference="O2R-aS-h8X"/>
                                 <include reference="ubu-tA-Uer"/>
                                 <include reference="7QX-0M-X0Y"/>
@@ -1750,7 +1713,13 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="ugS-bQ-3cX"/>
-                    <navigationItem key="navigationItem" title="Calendário" id="nrV-Qv-JpI"/>
+                    <navigationItem key="navigationItem" title="Calendário" id="HmF-GO-fie">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Ins-9y-ALj">
+                            <connections>
+                                <segue destination="0OA-ng-fYH" kind="show" id="drS-rK-egj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="calendarBar" destination="YA4-0F-law" id="Vtx-M5-uRF"/>
