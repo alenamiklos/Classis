@@ -34,6 +34,7 @@ class CalendarVC: UIViewController {
     @IBOutlet var calendarBar: UILabel!
     @IBOutlet var prevMonthButton: UIButton!
     @IBOutlet var nextMonthButton: UIButton!
+    @IBOutlet var newEventButton: UIButton!
     
     // Posicionando variável de membro do calendário
     var calendarLabelIntervalX: Int!
@@ -152,7 +153,7 @@ class CalendarVC: UIViewController {
         // Botão com cantos arredondados
         prevMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
         nextMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
-        
+        newEventButton.layer.cornerRadius = CGFloat(buttonRadius*0.75)
         
         // Obtendo a data atual
         now = NSDate()
@@ -257,9 +258,10 @@ class CalendarVC: UIViewController {
             //Definindo o botão inicial
             if(i < dayOfWeek - 1){
                 
-                //Digite não faz parte da data para não pressionar o botão
+                //Botões antes do primeiro dia do mês começar
                 button.setTitle("", forState: .Normal)
                 button.enabled = false
+                button.alpha = 0.2
                 
             }else if(i == dayOfWeek - 1 || i < dayOfWeek + maxDay - 1){
                 
@@ -267,13 +269,14 @@ class CalendarVC: UIViewController {
                 button.setTitle(String(tagNumber), forState: .Normal)
                 button.tag = tagNumber
                 tagNumber++
+                //Chamada da função que busca evento
                 
             }else if(i == dayOfWeek + maxDay - 1 || i < total){
                 
-                //Digite não faz parte da data para não pressionar o botão
+                //Botões depois do ultimo dia do mês
                 button.setTitle("", forState: .Normal)
                 button.enabled = false
-                
+                button.alpha = 0.0
             }
             
             //Definir o esquema de cores do botão
@@ -444,7 +447,28 @@ class CalendarVC: UIViewController {
     func buttonTapped(button: UIButton){
         // acão quando pressionamos o botão
         
+        //fazer a condição para quando não há eventos
+        var alertController = UIAlertController(title: "Não há eventos", message: "Desejar criar?", preferredStyle: .Alert)
         
+        // Create the actions
+        var okAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            
+            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("eventCreate") as EventCreationVC
+            self.presentViewController(vc, animated: true, completion: nil)
+            NSLog("OK Pressed")
+        }
+        var cancelAction = UIAlertAction(title: "Não", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        self.presentViewController(alertController, animated: true, completion: nil)
         println("\(year)/\(month)/\(button.tag)")
     }
     
