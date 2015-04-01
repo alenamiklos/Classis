@@ -14,7 +14,7 @@ class TimelineVC: UITableViewController, UISearchBarDelegate, UISearchDisplayDel
     
     @IBOutlet var timeLine: UITableView!
     var listaEventos = [Evento]()
-    var dao: DAO = DAO()
+    var dao: DAO = DAOFactory.getDAOInstance()
     
     var filteredEventos = [Evento]()
     

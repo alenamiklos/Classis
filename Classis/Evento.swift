@@ -38,4 +38,6 @@ class Evento {
         self.media = media
     }
     
+    
+    
 }

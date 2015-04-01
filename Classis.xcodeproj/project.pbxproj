@@ -10,7 +10,7 @@
 		33143BF11AB8B9E80026952F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF01AB8B9E80026952F /* Usuario.swift */; };
 		33143BF31AB8BA130026952F /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF21AB8BA130026952F /* Evento.swift */; };
 		33143BF51AB8BA200026952F /* AvaliacaoUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */; };
-		33143BF71AB8BA330026952F /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF61AB8BA330026952F /* DAO.swift */; };
+		33143BF71AB8BA330026952F /* DAOPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33143BF61AB8BA330026952F /* DAOPList.swift */; };
 		339E223A1AB88B500058B774 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */; };
 		33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B21AC9DA0D008B498A /* CalendarVC.swift */; };
 		33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C790B51AC9DB11008B498A /* DeviseSize.swift */; };
@@ -33,6 +33,8 @@
 		3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F71AB823CF0091489C /* UIColorExtension.swift */; };
 		3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F91AB8244D0091489C /* ClassisColor.swift */; };
+		3A4F34BB1ACC6FF100D6246A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BA1ACC6FF100D6246A /* DAO.swift */; };
+		3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */; };
 		3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575BF1AB8AB3D0067D357 /* Images.xcassets */; };
 		3AA91E001AC1D2B500539474 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFB1AC1D2B500539474 /* Bolts.framework */; };
 		3AA91E011AC1D2B500539474 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFC1AC1D2B500539474 /* Parse.framework */; };
@@ -73,7 +75,7 @@
 		33143BF01AB8B9E80026952F /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		33143BF21AB8BA130026952F /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoUsuario.swift; sourceTree = "<group>"; };
-		33143BF61AB8BA330026952F /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		33143BF61AB8BA330026952F /* DAOPList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPList.swift; sourceTree = "<group>"; };
 		339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		33C790B21AC9DA0D008B498A /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		33C790B51AC9DB11008B498A /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Lemon Yellow Sun.otf"; sourceTree = "<group>"; };
 		3A2F17F71AB823CF0091489C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3A2F17F91AB8244D0091489C /* ClassisColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassisColor.swift; sourceTree = "<group>"; };
+		3A4F34BA1ACC6FF100D6246A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
 		3AA575BF1AB8AB3D0067D357 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AA91DFB1AC1D2B500539474 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3AA91DFC1AC1D2B500539474 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -338,7 +342,9 @@
 				33143BF01AB8B9E80026952F /* Usuario.swift */,
 				33143BF21AB8BA130026952F /* Evento.swift */,
 				33143BF41AB8BA200026952F /* AvaliacaoUsuario.swift */,
-				33143BF61AB8BA330026952F /* DAO.swift */,
+				33143BF61AB8BA330026952F /* DAOPList.swift */,
+				3A4F34BA1ACC6FF100D6246A /* DAO.swift */,
+				3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -452,7 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33143BF71AB8BA330026952F /* DAO.swift in Sources */,
+				33143BF71AB8BA330026952F /* DAOPList.swift in Sources */,
 				3F6987001AB23A440079EB56 /* MainScreenVC.swift in Sources */,
 				3F6987021AB23AF40079EB56 /* EventCreationVC.swift in Sources */,
 				3A2A98451ACC235F00426DEF /* IQUIView+Hierarchy.swift in Sources */,
@@ -462,6 +468,7 @@
 				33C790B61AC9DB11008B498A /* DeviseSize.swift in Sources */,
 				3A2A984C1ACC235F00426DEF /* IQBarButtonItem.swift in Sources */,
 				3A2A98481ACC235F00426DEF /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */,
 				3A2A984A1ACC235F00426DEF /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				3A2A98471ACC235F00426DEF /* IQKeyboardManagerConstants.swift in Sources */,
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
@@ -478,6 +485,7 @@
 				3A2A98491ACC235F00426DEF /* IQKeyboardManager.swift in Sources */,
 				33C790B31AC9DA0D008B498A /* CalendarVC.swift in Sources */,
 				3F6986DB1AB22CEF0079EB56 /* AppDelegate.swift in Sources */,
+				3A4F34BB1ACC6FF100D6246A /* DAO.swift in Sources */,
 				3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
