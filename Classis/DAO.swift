@@ -13,33 +13,15 @@ class DAO {
     func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
     {
         var listaFake = [Evento]()
-        var jordan: Usuario = Usuario(id: "1",nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         
         println("Entrando na lista de eventos...")
         
-        println(jordan)
-        
-        
-        
-        
-        //        var lucas:Usuario = Usuario(nome: "Lucas Lima", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+
+        //var jordan: Usuario = Usuario(id: "1",nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
+        //var data: NSDate = NSDate()
         //
-        //        var alena:Usuario = Usuario(nome: "Alena Miklos", curso: "Design de Mídia Digital", habilidades: ["Photoshop", "Illustrator", "3D Max", "Adobe Premiere"], foto: nil, avaliacoes: nil)
-        //
-        //        var data: NSDate = NSDate()
-        //
-        //        var evento1: Evento = Evento(titulo: "Aula de C (Fundamentos)", tipoEvento: "Aulão", descEvento: "Aula inicial de fundamentos C", dataHora: data, tipoRemuneracao: "Gratuita", preco: nil, local: "Sofá do BEPiD", imagem: "aulao", responsavel: jordan, participantes: nil, areaConhecimento: "Programação", media: nil)
-        //
-        //        var evento2: Evento = Evento(titulo: "Aula Photoshop Básico", tipoEvento: "Aulão",descEvento: "Layers, ruler e blur", dataHora: data, tipoRemuneracao: "Gratuita", preco: nil, local: "LAB1 do BEPiD", imagem: "aulao", responsavel: alena, participantes: nil, areaConhecimento: "Design", media: nil)
-        //
-        //        var evento3: Evento = Evento(titulo: "Aula de C (Fundamentos)", tipoEvento: "Aulão", descEvento: "Aula inicial de fundamentos C em horário alternativo", dataHora: data, tipoRemuneracao: "Gratuita", preco: nil, local: "Sofá do BEPiD", imagem: "aulao", responsavel: lucas, participantes: nil, areaConhecimento: "Programação", media: nil)
-        //
-        //        var evento4: Evento = Evento(titulo: "Aula Photoshop Avançado", tipoEvento: "Aulão", descEvento: "Mitando com a Alena ˆ.ˆ", dataHora: data, tipoRemuneracao: "Pago", preco: "R$50,00", local: "LAB1 do BEPiD", imagem: "aulao", responsavel: alena, participantes: nil, areaConhecimento: "Design", media: nil)
-        //
-        //        var evento5: Evento = Evento(titulo: "Aula de C (Avançado)", tipoEvento: "Aulão",descEvento: "Olá, jovem", dataHora: data, tipoRemuneracao: "Paga", preco: "R$30,00", local: "Sofá do BEPiD", imagem: "aulao", responsavel: jordan, participantes: nil, areaConhecimento: "Programação", media: nil)
-        //
-        //        //listaFake.append(evento1)
-        //        listaFake += [evento1, evento2, evento3, evento4, evento5]
+        //var evento1: Evento = Evento(titulo: "Aula de C (Fundamentos)", tipoEvento: "Aulão", descEvento: "Aula inicial de fundamentos C", dataHora: data, tipoRemuneracao: "Gratuita", preco: nil, local: "Sofá do BEPiD", imagem: "aulao", responsavel: jordan, participantes: nil, areaConhecimento: "Programação", media: nil)
+
         
         let dict : NSMutableArray! = NSMutableArray(contentsOfFile: NSHomeDirectory() + "/Documents/Eventos.plist")
         
@@ -78,7 +60,7 @@ class DAO {
     {
         
         
-        println("Adicinando evneto...")
+        println("Adicinando evento...")
         
         var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
         var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
@@ -140,15 +122,19 @@ class DAO {
         return listaUsuarios
     }
     
-    func buscaUsuario (idBuscado: String, lista: [Usuario]) -> Usuario
+    func buscaUsuario (idBuscado: String) -> Usuario
     {
+        var lista = [Usuario]()
+
+        lista = self.listaUsuarios()
+        
         for var i = 0; i < lista.count; i++
         {
-            let isEqual = (lista[0].id == idBuscado)
+            let isEqual = (lista[i].id == idBuscado)
             
             if (isEqual)
             {
-                return lista[0]
+                return lista[i]
             }
         
         }
