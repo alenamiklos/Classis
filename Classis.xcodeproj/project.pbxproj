@@ -33,6 +33,7 @@
 		3A2F17F41AB820380091489C /* DK Lemon Yellow Sun.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */; };
 		3A2F17F81AB823D00091489C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F71AB823CF0091489C /* UIColorExtension.swift */; };
 		3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F17F91AB8244D0091489C /* ClassisColor.swift */; };
+		3A4A1A0C1AD2FF2300D7FF00 /* PerfilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A1A0B1AD2FF2300D7FF00 /* PerfilVC.swift */; };
 		3A4F34BB1ACC6FF100D6246A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BA1ACC6FF100D6246A /* DAO.swift */; };
 		3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */; };
 		3A4F34BF1ACC7F6C00D6246A /* EstadoSistema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */; };
@@ -99,6 +100,7 @@
 		3A2F17F11AB81DC80091489C /* DK Lemon Yellow Sun.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Lemon Yellow Sun.otf"; sourceTree = "<group>"; };
 		3A2F17F71AB823CF0091489C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3A2F17F91AB8244D0091489C /* ClassisColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassisColor.swift; sourceTree = "<group>"; };
+		3A4A1A0B1AD2FF2300D7FF00 /* PerfilVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilVC.swift; sourceTree = "<group>"; };
 		3A4F34BA1ACC6FF100D6246A /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
 		3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoSistema.swift; sourceTree = "<group>"; };
@@ -330,7 +332,7 @@
 				3F0250731ACB44CD00226E9D /* CadastroVC.swift */,
 				339E22391AB88B500058B774 /* TimeLineTableViewCell.swift */,
 				3A2F17F71AB823CF0091489C /* UIColorExtension.swift */,
-				3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */,
+				3A4A1A0B1AD2FF2300D7FF00 /* PerfilVC.swift */,
 				33C790B41AC9DACB008B498A /* Calendario */,
 				3AA575BF1AB8AB3D0067D357 /* Images.xcassets */,
 				3AD5964D1AB9C557007B9681 /* Eventos.plist */,
@@ -348,6 +350,7 @@
 				33143BF61AB8BA330026952F /* DAOPList.swift */,
 				3A4F34BA1ACC6FF100D6246A /* DAO.swift */,
 				3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */,
+				3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */,
 				3A2A984A1ACC235F00426DEF /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				3A2A98471ACC235F00426DEF /* IQKeyboardManagerConstants.swift in Sources */,
+				3A4A1A0C1AD2FF2300D7FF00 /* PerfilVC.swift in Sources */,
 				3A2F17FA1AB8244D0091489C /* ClassisColor.swift in Sources */,
 				3A2A984F1ACC235F00426DEF /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				33143BF31AB8BA130026952F /* Evento.swift in Sources */,

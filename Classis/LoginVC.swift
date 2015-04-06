@@ -31,10 +31,6 @@ class LoginVC: UIViewController {
         
         self.view.backgroundColor = UIColor(patternImage: image)
         
-        var object = PFObject(className: "TestClass")
-        object.addObject("Banana", forKey: "favoriteFood")
-        object.addObject("Chocolate", forKey: "favoriteIceCream")
-        object.saveInBackground()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,15 +39,20 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func loginWithUsername(sender: AnyObject) {
+        
         var usuario : Usuario?
+        
         usuario = dao.checkLogin(campoUsuario.text, userPass: campoSenha.text)
+        
         if (usuario == nil)
         {
+            println("Usuário nulo");
             estadoSistema.usuarioLogado = nil
             //TODO: enviar mensagem de erro ao usuário
         }
         else
         {
+            println("Usuário logado");
             estadoSistema.usuarioLogado = usuario
             self.performSegueWithIdentifier("logado", sender: self)
         }

@@ -118,7 +118,7 @@ class DAOPList: DAO {
             )
             
             
-            println(usuarioAchado)
+            //println(usuarioAchado)
             
             listaUsuarios.append(usuarioAchado)
         }
@@ -164,7 +164,6 @@ class DAOPList: DAO {
             }
             
         }
-        
         return nil
         
     }

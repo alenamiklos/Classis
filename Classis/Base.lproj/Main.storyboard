@@ -92,9 +92,6 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                                     </constraint>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="8" y="376" width="304" height="44"/>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qG-6g-R0R" userLabel="Password-Container">
                                 <rect key="frame" x="8" y="63" width="304" height="44"/>
@@ -121,9 +118,6 @@
                                     <constraint firstAttribute="bottom" secondItem="EWz-f9-wgn" secondAttribute="bottom" constant="7" id="gnH-lQ-9kd"/>
                                     <constraint firstItem="pwm-WH-afp" firstAttribute="centerY" secondItem="9qG-6g-R0R" secondAttribute="centerY" id="lgE-Y9-ub7"/>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="8" y="429" width="304" height="44"/>
-                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOG-8y-rqf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -132,9 +126,6 @@
                                     <color key="titleColor" red="0.96874071997824562" green="0.96576198184433981" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="87" y="501" width="144" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="loginWithUsername:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QkX-pc-zmd"/>
                                 </connections>
@@ -182,9 +173,13 @@
                                 <exclude reference="lOG-8y-rqf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="27a-FN-rEY"/>
-                                <exclude reference="FDL-dw-43z"/>
-                                <exclude reference="NcJ-kT-g4U"/>
+                                <exclude reference="I2Z-Im-xwc"/>
+                                <exclude reference="Icc-IO-zU2"/>
+                                <exclude reference="PYz-Rf-BTl"/>
+                                <exclude reference="h5p-Rf-qyY"/>
+                                <exclude reference="kgF-ZN-tdo"/>
+                                <exclude reference="9sg-Zg-sdA"/>
+                                <exclude reference="Goo-pm-iKl"/>
                                 <exclude reference="Qiw-fl-MnW"/>
                                 <exclude reference="RY7-TO-SSs"/>
                                 <exclude reference="vgh-9j-wTE"/>
@@ -193,13 +188,9 @@
                                 <exclude reference="OI4-yq-EAR"/>
                                 <exclude reference="eNx-my-veJ"/>
                                 <exclude reference="tE6-hS-FfZ"/>
-                                <exclude reference="Icc-IO-zU2"/>
-                                <exclude reference="PYz-Rf-BTl"/>
-                                <exclude reference="h5p-Rf-qyY"/>
-                                <exclude reference="kgF-ZN-tdo"/>
-                                <exclude reference="9sg-Zg-sdA"/>
-                                <exclude reference="Goo-pm-iKl"/>
-                                <exclude reference="I2Z-Im-xwc"/>
+                                <exclude reference="27a-FN-rEY"/>
+                                <exclude reference="FDL-dw-43z"/>
+                                <exclude reference="NcJ-kT-g4U"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -211,9 +202,13 @@
                                 <include reference="lOG-8y-rqf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="27a-FN-rEY"/>
-                                <include reference="FDL-dw-43z"/>
-                                <include reference="NcJ-kT-g4U"/>
+                                <include reference="I2Z-Im-xwc"/>
+                                <include reference="Icc-IO-zU2"/>
+                                <include reference="PYz-Rf-BTl"/>
+                                <include reference="h5p-Rf-qyY"/>
+                                <include reference="kgF-ZN-tdo"/>
+                                <include reference="9sg-Zg-sdA"/>
+                                <include reference="Goo-pm-iKl"/>
                                 <include reference="Qiw-fl-MnW"/>
                                 <include reference="RY7-TO-SSs"/>
                                 <include reference="vgh-9j-wTE"/>
@@ -222,13 +217,9 @@
                                 <include reference="OI4-yq-EAR"/>
                                 <include reference="eNx-my-veJ"/>
                                 <include reference="tE6-hS-FfZ"/>
-                                <include reference="Icc-IO-zU2"/>
-                                <include reference="PYz-Rf-BTl"/>
-                                <include reference="h5p-Rf-qyY"/>
-                                <include reference="kgF-ZN-tdo"/>
-                                <include reference="9sg-Zg-sdA"/>
-                                <include reference="Goo-pm-iKl"/>
-                                <include reference="I2Z-Im-xwc"/>
+                                <include reference="27a-FN-rEY"/>
+                                <include reference="FDL-dw-43z"/>
+                                <include reference="NcJ-kT-g4U"/>
                             </mask>
                         </variation>
                     </view>
@@ -1104,7 +1095,7 @@
         <!--Profile-->
         <scene sceneID="dFS-ft-al3">
             <objects>
-                <viewController title="Profile" id="KWA-YQ-gtH" customClass="LoginVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="KWA-YQ-gtH" customClass="PerfilVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nv8-zs-Oza"/>
                         <viewControllerLayoutGuide type="bottom" id="u2J-Pq-vKB"/>
@@ -1355,9 +1346,9 @@
                     <navigationItem key="navigationItem" id="4Ar-DP-oMe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="cursoUsuario" destination="ghp-qH-jBU" id="4Sa-VE-KZn"/>
-                        <outlet property="habilidadesTextView" destination="Q5i-j1-dGK" id="5qD-4e-8TV"/>
-                        <outlet property="nomeUsuario" destination="LmP-Co-Vyf" id="5gm-iU-NRh"/>
+                        <outlet property="cursoUsuario" destination="ghp-qH-jBU" id="86O-vI-U8Y"/>
+                        <outlet property="habilidadesTextView" destination="Q5i-j1-dGK" id="VO5-3t-tna"/>
+                        <outlet property="nomeUsuario" destination="LmP-Co-Vyf" id="zNy-3T-OSn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zig-N8-iGk" userLabel="First Responder" sceneMemberID="firstResponder"/>

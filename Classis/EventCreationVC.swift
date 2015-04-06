@@ -23,6 +23,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var remuneracao: UISegmentedControl!
     @IBOutlet weak var precoEvento: UITextField!
     @IBOutlet weak var descricaoEvento: UITextField!
+    
     var dao: DAO = DAOFactory.getDAOInstance()
     
     
