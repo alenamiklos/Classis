@@ -60,5 +60,11 @@ class LoginVC: UIViewController {
         
     }
     
+    @IBAction func registrar(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("primeiroLogin", sender: self)
+    
+        
+    }
 }
 
