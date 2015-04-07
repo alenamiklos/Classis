@@ -153,7 +153,7 @@ class CalendarVC: UIViewController {
         // Botão com cantos arredondados
         prevMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
         nextMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
-        newEventButton.layer.cornerRadius = CGFloat(buttonRadius*0.75)
+      //  newEventButton.layer.cornerRadius = CGFloat(buttonRadius*0.75)
         
         // Obtendo a data atual
         now = NSDate()

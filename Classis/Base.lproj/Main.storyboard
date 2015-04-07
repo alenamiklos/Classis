@@ -313,7 +313,7 @@
             </objects>
             <point key="canvasLocation" x="324" y="303.75"/>
         </scene>
-        <!--TimelineVC-->
+        <!--Timeline-->
         <scene sceneID="EXJ-1F-ila">
             <objects>
                 <tableViewController id="oaq-h9-SIP" customClass="TimelineVC" customModule="Classis" customModuleProvider="target" sceneMemberID="viewController">
@@ -550,7 +550,7 @@
                             <outlet property="delegate" destination="oaq-h9-SIP" id="CmR-5V-xIs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="kzE-oA-Ja2"/>
+                    <tabBarItem key="tabBarItem" title="Timeline" image="icontl" selectedImage="icontl" id="kzE-oA-Ja2"/>
                     <navigationItem key="navigationItem" id="bbU-Sb-PfS"/>
                     <connections>
                         <outlet property="searchBar" destination="vW1-Fn-D6g" id="Ql4-66-pXK"/>
@@ -1419,7 +1419,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="trl-Ep-FTs"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="iconperfil" selectedImage="iconperfil" id="trl-Ep-FTs"/>
                     <navigationItem key="navigationItem" id="4Ar-DP-oMe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -1432,6 +1432,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zig-N8-iGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2745" y="1033.5"/>
+        </scene>
+        <!--New Event-->
+        <scene sceneID="veg-il-lKL">
+            <objects>
+                <viewController id="ONf-Dd-KU3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c5i-PI-XEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="K3S-zg-hyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v53-0v-chU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New Event" image="iconplus" selectedImage="iconplus" id="q7n-Yg-52w"/>
+                    <navigationItem key="navigationItem" id="R4F-Qo-gyC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9b-S1-ZGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722.5" y="-288"/>
         </scene>
         <!--CadastroVC-->
         <scene sceneID="uq2-Lw-HV4">
@@ -1893,36 +1913,36 @@
                                 <exclude reference="iS8-KJ-nAx"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="XCa-H5-xPF"/>
-                                <exclude reference="bHv-Lh-wuw"/>
-                                <exclude reference="93q-xL-opr"/>
-                                <exclude reference="Tdr-u2-AIu"/>
-                                <exclude reference="CKt-AJ-UP5"/>
-                                <exclude reference="Vda-Aq-oIW"/>
-                                <exclude reference="M3o-Pt-eUb"/>
-                                <exclude reference="chk-M7-rGd"/>
+                                <exclude reference="aDC-8O-Mbl"/>
+                                <exclude reference="goK-ZJ-ywH"/>
+                                <exclude reference="g95-Iy-saM"/>
+                                <exclude reference="qsc-Z2-cos"/>
                                 <exclude reference="X50-cJ-XKn"/>
                                 <exclude reference="imF-zu-mP7"/>
                                 <exclude reference="aIg-f7-6vB"/>
                                 <exclude reference="euA-mE-US8"/>
                                 <exclude reference="Ijx-6v-OrJ"/>
                                 <exclude reference="buJ-Xu-VCJ"/>
+                                <exclude reference="M3o-Pt-eUb"/>
+                                <exclude reference="chk-M7-rGd"/>
                                 <exclude reference="HFZ-up-x9S"/>
                                 <exclude reference="Tgk-7b-yMd"/>
-                                <exclude reference="aDC-8O-Mbl"/>
-                                <exclude reference="goK-ZJ-ywH"/>
-                                <exclude reference="Jxz-lU-Ayd"/>
-                                <exclude reference="rkj-u7-CwL"/>
-                                <exclude reference="O0m-9v-3Zo"/>
-                                <exclude reference="tzP-Q9-XKw"/>
                                 <exclude reference="IsP-mh-16k"/>
                                 <exclude reference="oDZ-QW-j72"/>
-                                <exclude reference="g95-Iy-saM"/>
-                                <exclude reference="qsc-Z2-cos"/>
-                                <exclude reference="KA5-7Z-Dqo"/>
-                                <exclude reference="aYQ-qa-Uq1"/>
+                                <exclude reference="O0m-9v-3Zo"/>
+                                <exclude reference="tzP-Q9-XKw"/>
                                 <exclude reference="j0u-YO-A3G"/>
                                 <exclude reference="wkC-a5-8Lp"/>
+                                <exclude reference="Jxz-lU-Ayd"/>
+                                <exclude reference="rkj-u7-CwL"/>
+                                <exclude reference="CKt-AJ-UP5"/>
+                                <exclude reference="Vda-Aq-oIW"/>
+                                <exclude reference="93q-xL-opr"/>
+                                <exclude reference="Tdr-u2-AIu"/>
+                                <exclude reference="XCa-H5-xPF"/>
+                                <exclude reference="bHv-Lh-wuw"/>
+                                <exclude reference="KA5-7Z-Dqo"/>
+                                <exclude reference="aYQ-qa-Uq1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1944,36 +1964,36 @@
                                 <include reference="iS8-KJ-nAx"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="XCa-H5-xPF"/>
-                                <include reference="bHv-Lh-wuw"/>
-                                <include reference="93q-xL-opr"/>
-                                <include reference="Tdr-u2-AIu"/>
-                                <include reference="CKt-AJ-UP5"/>
-                                <include reference="Vda-Aq-oIW"/>
-                                <include reference="M3o-Pt-eUb"/>
-                                <include reference="chk-M7-rGd"/>
+                                <include reference="aDC-8O-Mbl"/>
+                                <include reference="goK-ZJ-ywH"/>
+                                <include reference="g95-Iy-saM"/>
+                                <include reference="qsc-Z2-cos"/>
                                 <include reference="X50-cJ-XKn"/>
                                 <include reference="imF-zu-mP7"/>
                                 <include reference="aIg-f7-6vB"/>
                                 <include reference="euA-mE-US8"/>
                                 <include reference="Ijx-6v-OrJ"/>
                                 <include reference="buJ-Xu-VCJ"/>
+                                <include reference="M3o-Pt-eUb"/>
+                                <include reference="chk-M7-rGd"/>
                                 <include reference="HFZ-up-x9S"/>
                                 <include reference="Tgk-7b-yMd"/>
-                                <include reference="aDC-8O-Mbl"/>
-                                <include reference="goK-ZJ-ywH"/>
-                                <include reference="Jxz-lU-Ayd"/>
-                                <include reference="rkj-u7-CwL"/>
-                                <include reference="O0m-9v-3Zo"/>
-                                <include reference="tzP-Q9-XKw"/>
                                 <include reference="IsP-mh-16k"/>
                                 <include reference="oDZ-QW-j72"/>
-                                <include reference="g95-Iy-saM"/>
-                                <include reference="qsc-Z2-cos"/>
-                                <include reference="KA5-7Z-Dqo"/>
-                                <include reference="aYQ-qa-Uq1"/>
+                                <include reference="O0m-9v-3Zo"/>
+                                <include reference="tzP-Q9-XKw"/>
                                 <include reference="j0u-YO-A3G"/>
                                 <include reference="wkC-a5-8Lp"/>
+                                <include reference="Jxz-lU-Ayd"/>
+                                <include reference="rkj-u7-CwL"/>
+                                <include reference="CKt-AJ-UP5"/>
+                                <include reference="Vda-Aq-oIW"/>
+                                <include reference="93q-xL-opr"/>
+                                <include reference="Tdr-u2-AIu"/>
+                                <include reference="XCa-H5-xPF"/>
+                                <include reference="bHv-Lh-wuw"/>
+                                <include reference="KA5-7Z-Dqo"/>
+                                <include reference="aYQ-qa-Uq1"/>
                             </mask>
                         </variation>
                     </view>
@@ -2001,8 +2021,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.25882352941176473" green="0.40000000000000002" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="ONf-Dd-KU3" kind="relationship" relationship="viewControllers" id="t1E-or-dJ0"/>
                         <segue destination="KWA-YQ-gtH" kind="relationship" relationship="viewControllers" id="3Ns-ms-NRV"/>
                         <segue destination="oaq-h9-SIP" kind="relationship" relationship="viewControllers" id="5ej-b2-gdt"/>
                         <segue destination="08o-og-nsg" kind="relationship" relationship="viewControllers" id="CTu-YB-1e8"/>
@@ -2192,7 +2214,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="ugS-bQ-3cX"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="iconcalendario" selectedImage="iconcalendario" id="ugS-bQ-3cX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Calendário" id="nrV-Qv-JpI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -2227,6 +2251,10 @@
     </scenes>
     <resources>
         <image name="fundo-botao" width="472" height="88"/>
+        <image name="iconcalendario" width="32" height="32"/>
+        <image name="iconperfil" width="32" height="32"/>
+        <image name="iconplus" width="32" height="32"/>
+        <image name="icontl" width="32" height="32"/>
         <image name="perfil-1" width="640" height="418"/>
         <image name="senha" width="50" height="51"/>
         <image name="user" width="50" height="51"/>
