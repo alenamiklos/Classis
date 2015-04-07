@@ -112,7 +112,7 @@ class DAOPList: DAO {
                 username: object["username"] as String,
                 senha: object["senha"] as String,
                 curso: object["curso"] as String,
-                habilidades: object["habilidades"] as [String],
+                habilidades: object["habilidades"] as String,
                 foto: nil,
                 avaliacoes: nil
             )

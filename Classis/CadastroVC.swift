@@ -8,12 +8,20 @@
 
 import UIKit
 
-class CadastroVC: UIViewController {
+class CadastroVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var nomeUsuario: UITextField!
+    @IBOutlet weak var emailUsuario: UITextField!
+    @IBOutlet weak var cursoUsuario: UITextField!
+    @IBOutlet weak var senhaUsuario: UITextField!
+    @IBOutlet weak var habilidadesUsuario: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.addSubview(photoImageView)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +29,34 @@ class CadastroVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func openPhotoLibrary(sender: AnyObject) {
+        var photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .PhotoLibrary
+        
+        self.presentViewController(photoPicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        photoImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
 
+    @IBAction func chooseFromCamera(sender: AnyObject) {
+        var photoPicker = UIImagePickerController()
+        
+        photoPicker.delegate = self
+        photoPicker.sourceType = .Camera
+        
+        self.presentViewController(photoPicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func cadastroUsuario(sender: AnyObject) {
+        
+    }
     /*
     // MARK: - Navigation
 

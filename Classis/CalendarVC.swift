@@ -455,6 +455,7 @@ class CalendarVC: UIViewController {
             UIAlertAction in
             
             var vc = self.storyboard?.instantiateViewControllerWithIdentifier("eventCreate") as EventCreationVC
+           // vc.dataHoraE
             self.presentViewController(vc, animated: true, completion: nil)
             NSLog("OK Pressed")
         }

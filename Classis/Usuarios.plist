@@ -14,10 +14,7 @@
 		<key>curso</key>
 		<string>BEPiD</string>
 		<key>habilidades</key>
-		<array>
-			<string>Objective-C</string>
-			<string>Swift</string>
-		</array>
+		<string>Design, Zueira</string>
 		<key>foto</key>
 		<string></string>
 		<key>media</key>
@@ -35,10 +32,7 @@
 		<key>curso</key>
 		<string>Infra</string>
 		<key>habilidades</key>
-		<array>
-			<string>Objective-C</string>
-			<string>Photoshop</string>
-		</array>
+		<string>Objective-C, Swift</string>
 		<key>foto</key>
 		<string></string>
 		<key>media</key>

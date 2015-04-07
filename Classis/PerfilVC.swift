@@ -16,17 +16,22 @@ class PerfilVC: UIViewController {
     @IBOutlet weak var habilidadesTextView: UITextView!
     @IBOutlet weak var nomeUsuario: UILabel!
     @IBOutlet weak var eventosRealizadosUsuario: UIButton!
-    @IBOutlet weak var imagemUsuario: UIImageView!
+    @IBOutlet weak var imagemUsuario: UIImageView?
+    
 
     var dao : DAO = DAOFactory.getDAOInstance()
     var estadoSistema : EstadoSistema = EstadoSistema.sharedInstance
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-      nomeUsuario.text=estadoSistema.usuarioLogado!.nome
-    cursoUsuario.text=estadoSistema.usuarioLogado!.curso
+        nomeUsuario.text=estadoSistema.usuarioLogado!.nome
+        cursoUsuario.text=estadoSistema.usuarioLogado!.curso
+        habilidadesTextView.text = estadoSistema.usuarioLogado!.habilidades
+        imagemUsuario?.image = estadoSistema.usuarioLogado?.foto
+        
+        
     
     }
     

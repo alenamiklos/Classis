@@ -17,7 +17,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
 
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var nomeEvento: UITextField!
-    //@IBOutlet weak var localEvento: UITextField
+    @IBOutlet weak var localEvento: UITextField!
     @IBOutlet weak var tipoEvento: UIPickerView!
     @IBOutlet weak var dataHoraEvento: UIDatePicker!
     @IBOutlet weak var remuneracao: UISegmentedControl!
@@ -71,10 +71,10 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             dataHora: strDate,
             tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
-            local: "",//localEvento.text
-            responsavel:"",
+            local: localEvento.text,
+            responsavel:"", //singleton usuario.id
             participantes:nil,
-            areaConhecimento: "Programação", //criar
+            areaConhecimento: "Programação", //criar campo
             media: nil)
         
         dao.criarEvento(evento)
@@ -138,8 +138,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        
+        println("\(datePicker.date)")
         var strDate = dateFormatter.stringFromDate(datePicker.date)
+        
     }
     
     
