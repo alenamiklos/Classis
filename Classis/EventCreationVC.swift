@@ -31,6 +31,7 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     var tipoEventoEscolhido:NSString = ""
     var tipoRemuneracaoEscolhido:NSString = ""
     var strDate : NSDate = NSDate()
+    var strData: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +69,12 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         var evento = Evento(titulo: nomeEvento.text,
             tipoEvento: tipoEventoEscolhido,
             descEvento: descricaoEvento.text,
-            dataHora: strDate,
+            dataHora: strData,
             tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
             local: localEvento.text,
             responsavel:"", //singleton usuario.id
-            participantes:nil,
+            participantes:"",
             areaConhecimento: "Programação", //criar campo
             media: nil)
         
@@ -139,8 +140,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         println("\(datePicker.date)")
-        var strDate = dateFormatter.stringFromDate(datePicker.date)
         
+        var strDate = dateFormatter.stringFromDate(datePicker.date)
+        strData = dateFormatter.stringFromDate(datePicker.date)
     }
     
     

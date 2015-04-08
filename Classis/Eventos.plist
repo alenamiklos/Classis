@@ -17,8 +17,6 @@
 		<string>R$ 30,00</string>
 		<key>localEvento</key>
 		<string>BEPiD</string>
-		<key>imagem</key>
-		<string>aulão.jpg</string>
 		<key>responsavel</key>
 		<integer>1</integer>
 		<key>participantes</key>
@@ -43,8 +41,6 @@
 		<string></string>
 		<key>localEvento</key>
 		<string>Copa do BEPiD</string>
-		<key>imagem</key>
-		<string></string>
 		<key>responsavel</key>
 		<string>76549</string>
 		<key>participantes</key>
@@ -69,8 +65,6 @@
 		<string>R$ 1000,00</string>
 		<key>localEvento</key>
 		<string>BossRoom</string>
-		<key>imagem</key>
-		<string></string>
 		<key>responsavel</key>
 		<string>rhejt</string>
 		<key>participantes</key>
