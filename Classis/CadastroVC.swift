@@ -16,6 +16,10 @@ class CadastroVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var cursoUsuario: UITextField!
     @IBOutlet weak var senhaUsuario: UITextField!
     @IBOutlet weak var habilidadesUsuario: UITextView!
+    @IBOutlet weak var usuario: UITextField!
+    
+    var dao: DAO = DAOFactory.getDAOInstance()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +59,21 @@ class CadastroVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func cadastroUsuario(sender: AnyObject) {
+    
+        
+        var novoUsuario = Usuario(id: "",
+            nome: nomeUsuario.text,
+            username: usuario.text,
+            senha: senhaUsuario.text,
+            curso: cursoUsuario.text,
+            habilidades: habilidadesUsuario.text,
+            foto: photoImageView.image,
+            avaliacoes: [])
+        
+        
+        
+        
+        
         
     }
     /*

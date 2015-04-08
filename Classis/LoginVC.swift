@@ -49,6 +49,28 @@ class LoginVC: UIViewController {
             println("Usuário nulo");
             estadoSistema.usuarioLogado = nil
             //TODO: enviar mensagem de erro ao usuário
+            var alertController = UIAlertController(title: "Usuário não encontrado!", message: "Desejar criar?", preferredStyle: .Alert)
+            
+            var okAction = UIAlertAction(title: "Sim", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                
+                var vc = self.storyboard?.instantiateViewControllerWithIdentifier("primeiroLogin") as CadastroVC
+                self.presentViewController(vc, animated: true, completion: nil)
+                NSLog("Sim Pressed")
+            }
+            var cancelAction = UIAlertAction(title: "Não", style: UIAlertActionStyle.Cancel) {
+                UIAlertAction in
+                NSLog("Não Pressed")
+            }
+            
+            // Add the actions
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+            // Present the controller
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            
         }
         else
         {

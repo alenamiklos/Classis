@@ -23,8 +23,10 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var remuneracao: UISegmentedControl!
     @IBOutlet weak var precoEvento: UITextField!
     @IBOutlet weak var descricaoEvento: UITextField!
+    @IBOutlet weak var areaConhecimentoEvento: UITextField!
     
     var dao: DAO = DAOFactory.getDAOInstance()
+    var estadosistema : EstadoSistema = EstadoSistema.sharedInstance
     
     
     var tipoEventosArray:NSArray = []
@@ -47,21 +49,8 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         // Do any additional setup after loading the view.
     }
     
-   // titulo: String, tipoEvento: String, dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
+  
     @IBAction func confirmarEventoButton(sender: UIButton) {
-        //crisEventos(titulo: nomeEvento.text, tipoEvento: "Aula", dataHora: NSDate, tipoRemuneracao: String, preco: Float?, local: String, responsavel: Usuario, participantes: Usuario?, areaConhecimento: String, media: Float?)
-        
-//       var evento = Evento(titulo: nomeEvento.text,
-//            tipoEvento: tipoEvento, //picker
-//            descEvento: descEvento.text,
-//            dataHora: dataHoraEvento,
-//            tipoRemuneracao: tipoRemuneracao, //picker
-//            preco: precoEvento.text,
-//            local: localEvento.text,
-//            imagem: nil,
-//            responsavel:jordan,
-//            areaConhecimento: areaConhecimento.text, //criar
-//            media: nil)
         
         var data: NSDate = NSDate()
     
@@ -72,9 +61,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
             local: localEvento.text,
-            responsavel:"", //singleton usuario.id
+            responsavel: estadosistema.usuarioLogado!.id,
             participantes:nil,
-            areaConhecimento: "Programação", //criar campo
+            areaConhecimento: areaConhecimentoEvento.text,
             media: nil)
         
         dao.criarEvento(evento)
