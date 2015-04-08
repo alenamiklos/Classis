@@ -10,7 +10,7 @@ import Foundation
 
 class DAOPList: DAO {
     
-    func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
+    func listaEventos() ->[Evento]
     {
         var listaFake = [Evento]()
         
@@ -55,6 +55,9 @@ class DAOPList: DAO {
         
         return listaFake
     }
+    
+    
+    
     
     func criarEvento(evento: Evento) -> Evento
     {
@@ -169,18 +172,71 @@ class DAOPList: DAO {
     }
 
     
-//    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]? {
-//        
-//    }
-//    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]? {
-//        
-//    }
-//    func checkLogin(userLogin: String, userPass: String) -> Usuario? {
-//        
-//    }
-//    func criarUsuario(novoUsuario: Usuario) -> Usuario? {
-//        
-//    }
+    func buscarEventosUsuario(usuario: Usuario) -> [Evento]? {
+        
+        var eventos = listaEventos()
+        
+        var lista = [Evento]()
+        
+        for var i = 0; i < eventos.count; i++
+        {
+            let isEqual = (eventos[i].responsavel == usuario.id)
+
+            if (isEqual) {
+                lista.append(eventos[i])
+            }
+            
+        }
+        
+        if (lista.count !=0 ) {
+            return lista
+        }
+        
+        
+        return nil
+    }
+
+        
     
+        
+
+    func buscarEventosUsuarioMes(usuario: Usuario, data: String) -> [Evento]? {
+        let dataArray = data.componentsSeparatedByString("/")
+        //ano = dataArray[0]
+        //mes = dataArray[1]
+        //dia = dataArray[2]
+        
+        var eventosUsuario = buscarEventosUsuario(usuario)
+        
+        var lista = [Evento]()
+        
+        
+        for var i = 0; i < eventosUsuario?.count; i++
+        {
+            let isEqual = (eventosUsuario?[i].dataHora == data)
+            
+            if (isEqual) {
+                lista.append(eventosUsuario?[i])
+            }
+            
+        }
+        
+        if (lista.count != 0 ) {
+            return lista
+        }
+        
+        
+        return nil
+
+        
+        
+        
+    }
+    func criarUsuario(novoUsuario: Usuario) -> Usuario? {
+    
+
+
+    }
+
 }
 
