@@ -17,14 +17,14 @@ class Usuario
     var nome: String
     var curso: String
     var habilidades: String // lista de String
-    var foto: UIImage?
+    var foto: String?
     var media: Float?
     var avaliacoes: [AvaliacaoUsuario]?
     //var avaliacoes: Array<AvaliacaoUsuario>
 //   var nome: String? tem ou não
 
     
-    init(id: String,nome: String, username: String, senha: String, curso: String, habilidades: String, foto: UIImage?, avaliacoes: [AvaliacaoUsuario]? ){
+    init(id: String,nome: String, username: String, senha: String, curso: String, habilidades: String, foto: String?, avaliacoes: [AvaliacaoUsuario]? ){
             self.id = id
             self.username = username
             self.senha = senha

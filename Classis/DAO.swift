@@ -9,12 +9,23 @@
 import Foundation
 
 protocol DAO{
-    func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
+    
+    //Eventos
     func criarEvento(evento: Evento) -> Evento
+    func listaEventos() ->[Evento]
+    
+    //Usuario
+    func criarUsuario(novoUsuario: Usuario) -> Usuario?
     func listaUsuarios() -> [Usuario]
-    func buscaUsuario (idBuscado: String) -> Usuario?
-//    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]?
-//    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]?
+    func buscaUsuario(idBuscado: String) -> Usuario?
+    
+    //Usuario -> Evento
+    func buscarEventosUsuario(usuario: Usuario) -> [Evento]?
+    func buscarEventosUsuarioDia(usuario: Usuario, data: String) -> [Evento]?
+    
+    //Sistema
     func checkLogin(userLogin: String, userPass: String) -> Usuario?
-//    func criarUsuario(novoUsuario: Usuario) -> Usuario?
-}
+    func stringRandom (tam : Int) -> String
+
+    }
+

@@ -29,7 +29,7 @@ class PerfilVC: UIViewController {
         nomeUsuario.text=estadoSistema.usuarioLogado!.nome
         cursoUsuario.text=estadoSistema.usuarioLogado!.curso
         habilidadesTextView.text = estadoSistema.usuarioLogado!.habilidades
-        imagemUsuario?.image = estadoSistema.usuarioLogado?.foto
+        //imagemUsuario?.image = estadoSistema.usuarioLogado?.foto
         
         
     

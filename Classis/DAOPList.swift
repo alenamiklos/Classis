@@ -10,18 +10,55 @@ import Foundation
 
 class DAOPList: DAO {
     
-    func listaEventos(area: String?, usuario: Usuario?) ->[Evento]
-    {
+    
+    //Eventos
+    func criarEvento(evento: Evento) -> Evento {
+        
+        
+        println("Adicinando evento...")
+        
+        var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
+        var fileManager = NSFileManager.defaultManager()
+        
+        var data : NSMutableArray! = NSMutableArray(contentsOfFile: path)
+        
+        var temp = [String: String]()
+        
+        temp["titulo"] = evento.titulo
+        temp["tipoEvento"] = evento.tipoEvento
+        temp["descEvent"] = evento.descEvento
+        temp["dataHora"] = evento.dataHora
+        temp["tipoRemuneração"] = evento.tipoRemuneracao
+        temp["preco"] = evento.preco?
+        temp["localEvento"] = evento.local
+        temp["responsavel"] = evento.responsavel
+        temp["participantes"] = evento.participantes
+        temp["areaConhecimento"] = evento.areaConhecimento
+        temp["media"] = evento.media?.description
+        
+        data.addObject(temp)
+        data.writeToFile(path, atomically: false)
+        println(data)
+        
+        //retornar um evento
+        
+        return evento;
+        
+        
+    }
+    
+    func listaEventos() ->[Evento] {
         var listaFake = [Evento]()
         
         println("Entrando na lista de eventos...")
         
-
+        
         //var jordan: Usuario = Usuario(id: "1",nome: "Jordan", curso: "Ciencia da Computacao", habilidades: ["C", "C++", "Swift", "Objective-C"], foto: nil, avaliacoes: nil)
         //var data: NSDate = NSDate()
         //
         //var evento1: Evento = Evento(titulo: "Aula de C (Fundamentos)", tipoEvento: "Aulão", descEvento: "Aula inicial de fundamentos C", dataHora: data, tipoRemuneracao: "Gratuita", preco: nil, local: "Sofá do BEPiD", imagem: "aulao", responsavel: jordan, participantes: nil, areaConhecimento: "Programação", media: nil)
-
+        
         
         let dict : NSMutableArray! = NSMutableArray(contentsOfFile: NSHomeDirectory() + "/Documents/Eventos.plist")
         
@@ -32,17 +69,23 @@ class DAOPList: DAO {
             let object = dict[i] as NSDictionary
             println(object)
             
-            var evento = Evento(titulo: object["titulo"] as String,
+            
+            
+            
+            var evento = Evento (
+                titulo: object["titulo"] as String,
                 tipoEvento: object["tipoEvento"] as String,
                 descEvento: object["descEvento"] as String,
-                dataHora: object["dataHora"] as NSDate,
+                dataHora: object["dataHora"] as String,
                 tipoRemuneracao: object["tipoRemuneracao"] as String,
                 preco: object["preco"] as? String,
-                local: object["localEvento"] as String,
-                responsavel:"",
-                participantes: nil,
+                local: object["local"] as String,
+                responsavel: object["responsavel"] as String,
+                participantes: object["participantes"] as String,
                 areaConhecimento: object["areaConhecimento"] as String,
-                media: nil)
+                media: nil
+            )
+
             println(evento)
             
             listaFake.append(evento)
@@ -56,46 +99,52 @@ class DAOPList: DAO {
         return listaFake
     }
     
-    func criarEvento(evento: Evento) -> Evento
-    {
-        
-        
-        println("Adicinando evento...")
+    
+    //Usuario
+    func criarUsuario(novoUsuario: Usuario) -> Usuario? {
         
         var pathAux = NSSearchPathForDirectoriesInDomains (.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var path = pathAux.stringByAppendingPathComponent("Eventos.plist")
+        var path = pathAux.stringByAppendingPathComponent("Usuarios.plist")
         var fileManager = NSFileManager.defaultManager()
         
         var data : NSMutableArray! = NSMutableArray(contentsOfFile: path)
         
-        var temp : Dictionary = [
-            "titulo": evento.titulo,
-            "tipoEvento": evento.tipoEvento,
-            "descEvento": evento.descEvento,
-            "dataHora": "",
-            "tipoRemuneracao": evento.tipoRemuneracao,
-            "preco": evento.preco,
-            "localEvento": evento.local,
-            "responsavel": "rhejt",
-            "areaConhecimento": evento.areaConhecimento
-            ]
+        var randomId = stringRandom(8)
+        
+        let dataGeraRandom = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let componentes = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: dataGeraRandom)
+        let horas = componentes.hour
+        let minutos = String(componentes.minute)
+        var segundos = String(componentes.second)
         
         
-        //data.addObject(evento)
+        
+        novoUsuario.id = "\(randomId)" + "\(minutos)" + "\(segundos)"
+        
+        var temp = [String: String]()
+        
+        temp["username"] = novoUsuario.username
+        temp["senha"] = novoUsuario.senha
+        temp["id"] = novoUsuario.id
+        temp["nome"] = novoUsuario.nome
+        temp["curso"] = novoUsuario.curso
+        temp["habilidades"] = novoUsuario.habilidades
+        temp["foto"] = novoUsuario.foto
+        temp["media"] = "0"
+        
+        
+        data.addObject(temp)
         
         data.writeToFile(path, atomically: false)
         println(data)
         
-        //retornar um evento
-        
-        return evento;
-        
+        return novoUsuario;
         
     }
     
-    func listaUsuarios() -> [Usuario]
-    {
-       var listaUsuarios = [Usuario]()
+    func listaUsuarios() -> [Usuario] {
+        var listaUsuarios = [Usuario]()
         
         let dict : NSMutableArray! = NSMutableArray(contentsOfFile: NSHomeDirectory() + "/Documents/Usuarios.plist")
         
@@ -122,14 +171,13 @@ class DAOPList: DAO {
             
             listaUsuarios.append(usuarioAchado)
         }
-
+        
         return listaUsuarios
     }
     
-    func buscaUsuario (idBuscado: String) -> Usuario?
-    {
+    func buscaUsuario(idBuscado: String) -> Usuario? {
         var lista = [Usuario]()
-
+        
         lista = self.listaUsuarios()
         
         for var i = 0; i < lista.count; i++
@@ -140,15 +188,82 @@ class DAOPList: DAO {
             {
                 return lista[i]
             }
-        
+            
         }
         
         
         return nil
     }
     
-    func checkLogin(userLogin: String, userPass: String) -> Usuario?
-    {
+    
+    //Usuario -> Evento
+    func buscarEventosUsuario(usuario: Usuario) -> [Evento]? {
+        
+        var eventos = listaEventos()
+        
+        var lista = [Evento]()
+        
+        for var i = 0; i < eventos.count; i++
+        {
+            let isEqual = (eventos[i].responsavel == usuario.id)
+            
+            if (isEqual)
+            {
+                lista.append(eventos[i])
+            }
+            
+        }
+        
+        if (lista.count != 0 ) {
+            return lista
+        }
+        
+        
+        return nil
+    }
+    
+    func buscarEventosUsuarioDia(usuario: Usuario, data: String) -> [Evento]? {
+        let dataArray = data.componentsSeparatedByString(" ")
+        //anoMesDia = dataArray[0]
+        //hora = dataArray[1]
+        
+        var calendario = String(dataArray[0])
+        
+        let anoMesDia = calendario.componentsSeparatedByString("/")
+        //ano = anoMesDia[0]
+        //mes = anoMesDia[1]
+        //dia = anoMesDia[2]
+        
+        var eventosUsuario = buscarEventosUsuario(usuario)
+        
+        var lista = [Evento]()
+        
+        
+        for var i = 0; i < eventosUsuario?.count; i++
+        {
+            let isEqual = (eventosUsuario?[i].dataHora == data)
+            
+            if (isEqual) {
+                lista.append(eventosUsuario![i])
+            }
+            
+        }
+        
+        if (lista.count != 0 ) {
+            return lista
+        }
+        
+        
+        return nil
+        
+        
+        
+        
+    }
+    
+    
+    //Sistema
+    func checkLogin(userLogin: String, userPass: String) -> Usuario? {
         var lista : [Usuario]
         lista = listaUsuarios()
         
@@ -167,20 +282,21 @@ class DAOPList: DAO {
         return nil
         
     }
-
     
-//    func buscarEventosUsuarioDia(usuario: Usuario, dia: String) -> [Evento]? {
-//        
-//    }
-//    func buscarEventosUsuarioMes(usuario: Usuario, mes: Int) -> [Evento]? {
-//        
-//    }
-//    func checkLogin(userLogin: String, userPass: String) -> Usuario? {
-//        
-//    }
-//    func criarUsuario(novoUsuario: Usuario) -> Usuario? {
-//        
-//    }
+    func stringRandom (tam : Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        
+        var randomString : NSMutableString = NSMutableString(capacity: tam)
+        
+        for (var i=0; i < tam; i++){
+            var length = UInt32 (letters.length)
+            var rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }
+        
+        return randomString
+    }
     
 }
 
