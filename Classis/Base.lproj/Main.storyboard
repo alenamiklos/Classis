@@ -2165,6 +2165,7 @@
                         <outlet property="photoImageView" destination="0Y0-k9-bvY" id="RJH-uH-GpI"/>
                         <outlet property="senhaUsuario" destination="aRf-ya-mQ6" id="gaK-wl-o4H"/>
                         <outlet property="usuario" destination="Xzg-7J-jip" id="LJd-iK-eri"/>
+                        <segue destination="eim-42-83h" kind="show" identifier="cadastroConcluido" id="OSY-Re-Mqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeQ-j6-sza" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2422,5 +2423,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m8S-bZ-Qv0"/>
+        <segue reference="OSY-Re-Mqs"/>
     </inferredMetricsTieBreakers>
 </document>

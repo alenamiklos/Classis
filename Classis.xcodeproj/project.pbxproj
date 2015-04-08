@@ -40,11 +40,6 @@
 		3A4F34BD1ACC714B00D6246A /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BC1ACC714B00D6246A /* DAOFactory.swift */; };
 		3A4F34BF1ACC7F6C00D6246A /* EstadoSistema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F34BE1ACC7F6C00D6246A /* EstadoSistema.swift */; };
 		3AA575C01AB8AB3D0067D357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575BF1AB8AB3D0067D357 /* Images.xcassets */; };
-		3AA91E001AC1D2B500539474 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFB1AC1D2B500539474 /* Bolts.framework */; };
-		3AA91E011AC1D2B500539474 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFC1AC1D2B500539474 /* Parse.framework */; };
-		3AA91E021AC1D2B500539474 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFD1AC1D2B500539474 /* ParseCrashReporting.framework */; };
-		3AA91E031AC1D2B500539474 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFE1AC1D2B500539474 /* ParseFacebookUtils.framework */; };
-		3AA91E041AC1D2B500539474 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91DFF1AC1D2B500539474 /* ParseUI.framework */; };
 		3AA91E0A1AC1D47000539474 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91E051AC1D47000539474 /* libstdc++.6.dylib */; };
 		3AA91E0B1AC1D47100539474 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91E061AC1D47000539474 /* MobileCoreServices.framework */; };
 		3AA91E0C1AC1D47100539474 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA91E071AC1D47000539474 /* SystemConfiguration.framework */; };
@@ -141,15 +136,10 @@
 			files = (
 				3AA91E0A1AC1D47000539474 /* libstdc++.6.dylib in Frameworks */,
 				3AA91E0B1AC1D47100539474 /* MobileCoreServices.framework in Frameworks */,
-				3AA91E011AC1D2B500539474 /* Parse.framework in Frameworks */,
-				3AA91E021AC1D2B500539474 /* ParseCrashReporting.framework in Frameworks */,
-				3AA91E041AC1D2B500539474 /* ParseUI.framework in Frameworks */,
 				3AA91E0D1AC1D47100539474 /* AudioToolbox.framework in Frameworks */,
-				3AA91E031AC1D2B500539474 /* ParseFacebookUtils.framework in Frameworks */,
 				3AA91E0C1AC1D47100539474 /* SystemConfiguration.framework in Frameworks */,
 				3AA91E0E1AC1D47100539474 /* libsqlite3.dylib in Frameworks */,
 				33C790BC1AC9DF89008B498A /* QuartzCore.framework in Frameworks */,
-				3AA91E001AC1D2B500539474 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

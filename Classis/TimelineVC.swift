@@ -28,11 +28,8 @@ class TimelineVC: UITableViewController, UISearchBarDelegate, UISearchDisplayDel
         //self.listaEventos = []
         //[[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]]
         //UITabBar.appearance()selectedImageTintColor: [UIColor whiteColor]
-<<<<<<< HEAD
-        listaEventos = self.dao.listaEventos(nil, usuario: nil)
-=======
+ 
         listaEventos = self.dao.listaEventos()
->>>>>>> origin/master
         print("Eventos: ")
         println(listaEventos.count)
     }

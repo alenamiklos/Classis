@@ -62,15 +62,9 @@ class EventCreationVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             tipoRemuneracao: tipoRemuneracaoEscolhido,
             preco: precoEvento.text,
             local: localEvento.text,
-<<<<<<< HEAD
             responsavel: estadosistema.usuarioLogado!.id,
-            participantes:nil,
-            areaConhecimento: areaConhecimentoEvento.text,
-=======
-            responsavel:"", //singleton usuario.id
             participantes:"",
-            areaConhecimento: "Programação", //criar campo
->>>>>>> origin/master
+            areaConhecimento: areaConhecimentoEvento.text,
             media: nil)
         
         dao.criarEvento(evento)

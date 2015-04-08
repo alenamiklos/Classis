@@ -18,8 +18,8 @@ class CadastroVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var habilidadesUsuario: UITextView!
     @IBOutlet weak var usuario: UITextField!
     
-    var dao: DAO = DAOFactory.getDAOInstance()
-    
+    var dao : DAO = DAOFactory.getDAOInstance()
+    var estadoSistema : EstadoSistema = EstadoSistema.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +67,20 @@ class CadastroVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             senha: senhaUsuario.text,
             curso: cursoUsuario.text,
             habilidades: habilidadesUsuario.text,
-            foto: photoImageView.image,
+            foto: nil,
             avaliacoes: [])
         
+        novoUsuario = dao.criarUsuario(novoUsuario)!
         
-        
-        
+        if (novoUsuario.id != "")
+        {
+             estadoSistema.usuarioLogado = novoUsuario
+            self.performSegueWithIdentifier("cadastroConcluido", sender: self)
+        }
+        else
+        {
+            
+        }
         
         
     }
